@@ -51,6 +51,15 @@
     transition: all 0.3s;
 }
 
+.btn.white{
+    background-color: #fff;
+    color: #111;
+}
+
+.btn.white:hover{
+    background-color: #EB5757;
+    color: #fff ;
+}
 
 
  body{
@@ -178,13 +187,34 @@
     display: flex;
     align-items: center;
     gap: 40px;
+}
 
+.banner .item:hover .photo img.img1{
+    opacity: 0;
+}
+
+.banner .item:hover .photo img.img2{
+    opacity: 1;
+}
+
+.banner .item .photo{
+    position: relative;
+    width: 150px;
+    height: 150px;
 }
 
 .banner .item img{
+    position: absolute;
     display: block;
     width: 150px;
     height: 150px;
+    top: 0;
+    left: 0;
+}
+
+.banner .item img.img2{
+    opacity: 0;
+    transition: all 0.3s;
 }
 
 .banner .text_box h3{
@@ -198,7 +228,234 @@
     margin-bottom: 37px;
 }
 
+/* titles */
+.container .titles{
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 60px;
+}
+
+.container .titles h2{
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.container .titles p{
+    font-style: 16px;
+    color: #565656;
+}
+
 /* section2 */
 .section2{
     margin-top: 120px;
 }
+
+.section2 .items{
+    display: flex;
+    gap: 40px;
+}
+
+.section2 .items li{
+    width: 260px;
+    height: 260px;
+    justify-content: center;
+    background-color: #F5F5F5;
+    position: relative;
+    cursor: pointer;
+}
+
+.section2 .items li img:last-child{
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+.section2 .items li:hover img:first-child{
+    opacity: 0;
+    transition: all 0.8s;
+}
+.section2 .items li:hover img:last-child{
+    opacity: 1;
+}
+
+.section2 .items img{
+    width: 160px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* big banner */
+.big_banner{
+    height: 600px;
+    background-image: url('../images/bg_banner.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-top: 93px;
+    margin-bottom: 120px;
+/*     
+    background-size: cover; 
+    background: url("../images/bg_banner.png") no-repeat center; */
+}
+
+.text-box{
+    color: white;
+    padding-top: 170px;
+}
+
+.text-box h2{
+    font-size: 64px;
+    font-weight: 700px;
+}
+
+.text-box p{
+    font-size: 20px;
+    line-height: 1.5;
+    color: #ccc;
+    width: 475px;
+    /* margin-top: 41px;
+    margin-bottom: 68px; */
+    margin: 41px 0 68px;
+}
+
+/* section3 */
+.section3 .titles{
+    margin-bottom: 60px;
+}
+
+.section3 .items{
+    width: 1160px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+      
+}
+
+.section3 .items li{
+    width: 260px;
+    height: 260px;
+    background-color: #F5F5F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* section4 */
+.section4 .items{
+    display: flex;
+    width: 1160px ;
+    gap: 40px;
+  
+}
+
+.section4 .items li{
+    width: 360px;
+    height: 360px;
+    border-radius: 32px;
+    overflow: hidden;
+}
+
+.section4 .items li img{
+    width: 100%;
+    display: block;
+    transition: all 0.5s;
+}
+
+.section4 .items li:hover img{
+    transform: scale(1.2);
+}
+
+/* footer */
+.footer{
+    margin-top: 120px;
+    background-color: #222222;
+    color: #fff;
+    padding-top: 100px;
+    padding-bottom: 46px;
+}
+
+.f_logo img{
+        filter: invert(100%);
+}
+
+.footer img{
+    display: block;
+    width: 130px;
+    height: 40px;
+}
+
+.footer .contents{
+    display: flex;
+    margin-bottom: 60px;
+}
+
+.footer .f_info{
+    width: 598px;
+}
+
+.f_info .text{
+    font-size: 14px;
+    margin: 30px 0 ;
+    line-height: 1.6;
+    color: #F5F5F5;
+}
+
+.f_info .btns {
+    display: flex;
+    padding-bottom: 30px;
+    gap: 18px;
+}
+
+.f_info .btns a{
+    display: block;
+    
+}
+
+.f_info .sns{
+    display: flex;
+    font-size: 30px;
+    gap: 16px;
+}
+
+
+.copyright{
+    color: #9d9d9d;
+    font-size: 14px;
+}
+
+
+.footer .f_menu{
+    width: 560px;
+    display: flex;
+    gap: 125px;
+}
+
+.footer .f_menu li h3{
+    font-size: 20px;
+    font-weight: 700;
+    display: block;
+    width: 75px;
+    height: 20px;
+}
+
+.footer .f_menu li{
+    display: flex;
+    flex-direction: column;
+    gap: 44px;  
+}
+
+.footer .f_menu li a{
+    padding: 16px 0;
+}
+
+
+.footer .f_menu ul{}
+
+.footer .f_menu ul li{}
+
+.footer .f_menu ul li a{}

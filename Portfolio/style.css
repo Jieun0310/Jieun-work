@@ -20,6 +20,11 @@ body{
     
 }
 
+.container{
+    width: 1160px;
+    margin: 0 81px;
+}
+
 /* wrap */
 .wrap{
     width: 1200px;
@@ -85,11 +90,30 @@ body{
 #home p{
     position: relative;
     display: inline-block;
-    top: 456px;
-    left: 521px;
+    top: 414px;
+    left: 427px;
     text-align: center;
 }
 
-.work{}
-.work .titles{}
-.work .titles{}
+#work{}
+
+
+#work .titles{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 45px;
+    align-items: center;
+    gap: 152px;
+}
+
+#work .titles h2{
+    display: flex;
+    display: block;
+    font-size: 24px;
+   
+    
+}
+
+#work .titles{}
