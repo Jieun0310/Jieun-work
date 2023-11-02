@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+body{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+}
+
+.wrap{}
+
+.container{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+/* header */
+.header{
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.f_logo img{
+    display: block;
+    width: 130px;
+    height: 51px;
+}
+
+.gnb1{
+    display: flex;
+    margin: 0 30px;
+    gap: 20px;
+}
+
+.gnb1 li{
+    
+}
+
+.gnb1 li a{
+    display: block;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.gnb1 li a:hover{
+    text-decoration: underline;
+}
+
+.btn_login{}
+
+.btn_login a{
+    display: flex;
+    background-color: #18ABEB;
+    color: #fff;
+    padding: 10px 12px;
+    border-radius: 4px;
+}
+
+.btn_login span{
+    line-height: 1.0;
+}
+
+.btn_login img{
+    display: block;
+    margin-right: 5px;
+}
+
+.gnb2{
+    display: flex;
+}
+
+.gnb2 li{
+    padding: 0 10px;
+    border-right: 1px solid #333;
+}
+
+.gnb2 li:last-child{
+    border-right: none;
+}
+
+.gnb2 li a{
+    display: block;
+}
+
+.btn_search a{}
+.btn_search img{
+    display: block;
+}
+
+/* slider */
+
+.slider{
+    position: relative;
+}
+
+.slide{
+    background-image: url(./images/1081850_221014_h_main_vis_hdcd.png);
+    background-position: center;
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.slider_contents{
+    position: absolute;
+    color: #fff;
+    top: 30%;
+}
+
+.slider_contents h1{
+    line-height: 1.2;
+    font-size: 32px;
+}
+
+.slider_contents p{
+    margin: 20px 0;
+}
+
+.btn_view{
+    display: inline-block;
+    padding: 10px 15px;
+    border: 1px solid #fff;
+}
+
+/* sub_menu */
+.sub_menu{
+    display: flex;
+    width: 1000px;
+    justify-content: center;
+    z-index: 1;
+    height: 50px;
+    line-height: 50px;
+    background-color: #fff;  
+    position: absolute;
+    top: 500px;
+    box-shadow: 1px 2px 4px 2px rgb(255,255,2555,0.5);
+}
+
+.sub_menu li span{
+    padding: 0 30px;
+    border-right: 1px solid #b3b3b3;
+}
+
+.sub_menu li:last-child span{
+    border-right: none
+}
+
+/* Event */
+.event_bg{
+    background-color: #F3F3F7;
+    width: 100%;
+}
+.event{
+    padding: 70px 0;
+    height: 550px;
+}
+
+
+.event_titles{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.event_titles h2{
+    font-size: 32px;
+}
+
+.event_titles ul{
+    display: flex;
+    line-height: 1;
+    gap: 20px;
+    color: #aeaeae;
+    
+}
+
+.event_titles ul li{
+    
+}
+
+.event_titles ul li{
+    font-size: 14px;
+    padding: 10px;
+   
+}
+
+.event_titles ul li:first-child a{
+    color: #18ABEB;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.Btn_plus{
+    border: 1px solid #aeaeae;    
+    padding: 10px;
+}
+
+.event_list{
+    display: flex;
+    margin-top: 36px;
+    gap: 24px;
+    
+}
+
+.event_list li{
+    width: 230px;
+    height: 256px;
+}
+
+.event_list li a{}
+
+.event_list li a img{
+    display: block;
+    width: 230px;
+    height: 165px;
+}
+
+.contents{
+    width: 230px;
+    height: 90px;
+    background-color: #fff;
+    padding: 18px;
+}
+
+.event_list li p{
+    font-weight: bold;
+}
+
+.event_list li span{
+    font-size: 12px;
+}
+
+.big_ban{
+    height: 570px;
+    position: relative;
+}
+
+.big_img{
+    background-image: url(./images/h_intro_mb_220527.jpg);
+    background-position: center;
+    height: 570px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.big_contents{
+    position: absolute;
+    top: 25%;
+    left: 55%;
+    color: #fff;
+}
+
+.big_contents p{
+    margin: 40px 0;
+}
+
+.QR{
+    display: flex;
+    gap: 40px;
+}
+
+.QR .app{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+/* card */
+.card{
+    margin: 100px 0;
+}
+
+.card_titles{
+    display: flex;
+    line-height: 1;
+    justify-content: space-between;
+}
+
+.card_titles h2{
+    font-size: 32px;
+}
+
+.card_list{
+    display: flex;
+    justify-content: center;
+}
+
+.card_list li{
+    width: 200px;
+    margin-top: 36px;
+    
+}
+
+.card_list li img{
+    display: block;
+    width: 146px;
+    height: 235px;
+}
+
+
