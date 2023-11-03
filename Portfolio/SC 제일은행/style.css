@@ -714,3 +714,9 @@ body{
     display: flex;
     gap: 20px;
 }
+
+.address_img img:first-child{
+    display: block;
+    width: 59px;
+    height: 32px;
+}
