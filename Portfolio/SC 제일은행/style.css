@@ -24,10 +24,27 @@ body{
 
 .wrap{}
 
+.side_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1100px;   
+}
+    
+.side_btn i{
+    display: block;
+    color: #F3F3F7;
+    background-color: rgb(34,34,34,0.5);
+    font-size: 24px;
+    height: 38px;
+    line-height: 38px;
+}
+
 .container{
     width: 1000px;
     margin: 0 auto;
 }
+
 
 /* header */
 .header{
@@ -54,13 +71,14 @@ body{
     
 }
 
-.gnb1 li a{
+.gnb1 a{
     display: block;
     padding: 10px;
     font-weight: bold;
+    font-size: 16px;
 }
 
-.gnb1 li a:hover{
+.gnb a:hover{
     text-decoration: underline;
 }
 
@@ -70,12 +88,13 @@ body{
     display: flex;
     background-color: #18ABEB;
     color: #fff;
-    padding: 10px 12px;
+    padding: 8px 10px;
     border-radius: 4px;
 }
 
 .btn_login span{
     line-height: 1.0;
+    font-size: 14px;
 }
 
 .btn_login img{
@@ -98,6 +117,7 @@ body{
 
 .gnb2 li a{
     display: block;
+    font-size: 12px;
 }
 
 .btn_search a{}
@@ -109,6 +129,42 @@ body{
 
 .slider{
     position: relative;
+}
+
+.slider .side_btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+.slider .play_btn{
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+}
+
+.slider .play_btn .stop{
+    display: block;
+    width: 10px;
+    height: 10px;
+    content: "";
+    background-position: 0px 0px;
+    background-image: url(./images/sub_mainVisual_controls2.png);
+    background-repeat: no-repeat;
+}
+
+.slider .play_btn .list1{
+    display: block;
+    width: 25px;
+    height: 10px;
+    content: "";
+    background-position: -15px 0px;
+    background-image: url(./images/sub_mainVisual_controls2.png);
+    background-repeat: no-repeat;
 }
 
 .slide{
@@ -151,7 +207,7 @@ body{
     background-color: #fff;  
     position: absolute;
     top: 500px;
-    box-shadow: 1px 2px 4px 2px rgb(255,255,2555,0.5);
+    box-shadow: 5px 5px 5px 0px rgb(34,34,34,0.2);
 }
 
 .sub_menu li span{
@@ -163,11 +219,29 @@ body{
     border-right: none
 }
 
+.sub_menu li:hover{
+    color: #18ABEB;
+    text-decoration: underline;
+}
+
 /* Event */
 .event_bg{
     background-color: #F3F3F7;
     width: 100%;
+    position: relative;
 }
+
+.event_bg .side_btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.event_bg .side_btn i{
+    background-color: #111;
+}
+
 .event{
     padding: 70px 0;
     height: 550px;
@@ -203,6 +277,8 @@ body{
     padding: 10px;
 }
 
+
+
 .event_titles ul li:hover{
     color: #18ABEB;
 }
@@ -233,15 +309,20 @@ body{
     display: flex;
     margin-top: 36px;
     gap: 24px;
-    
+}
+
+.event_list li a{
+    width: 230px;
+    height: 255px;  
 }
 
 .event_list li{
-    width: 230px;
-    height: 256px;
+    border: 5px solid transparent;
 }
 
-.event_list li a{}
+.event_list li:hover{
+    border: 5px solid #18ABEB;
+}
 
 .event_list li a img{
     display: block;
@@ -258,10 +339,15 @@ body{
 
 .event_list li p{
     font-weight: bold;
+    display: block;
+    height: 38px;
 }
 
 .event_list li span{
+    display: inline-block;
     font-size: 12px;
+    height: 20px;
+
 }
 
 .big_ban{
@@ -378,16 +464,14 @@ body{
 }
 
 .notice1{
-    padding: 20px;
     background-color: #fff;
-    
 }
 
 .notice_titles{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin: 20px;
 }
 
 .notice_titles h2{
@@ -430,9 +514,21 @@ body{
     text-decoration: underline;
 }
 
-.small_banner{
+.notice2{
     position: relative;
+    overflow: hidden;
+   
+}
+
+.notice2 .box{
+    height: 195px;
+}
+
+.small_banner{
     display: flex;
+    position: absolute;
+    
+    
     
 }
 .small_banner li{
@@ -441,45 +537,107 @@ body{
 
 .small_banner img{
     display: block;
-    /* position: absolute; */
+    width: 490px;
+    
+
+}
+
+.notice2 .play_btn{
+    position: absolute;
+    display: flex;
+    gap: 5px;
+    top: 42%;
+    left: 50%;
+    transform: translate(-42%,-50%);
+}
+
+.notice2 .play_btn .stop{
+    display: block;
+    width: 10px;
+    height: 10px;
+    content: "";
+    background-position: 0px 0px;
+    background-image: url(./images/sub_mainVisual_controls2.png);
+    background-repeat: no-repeat;
+}
+
+.notice2 .play_btn .list1{
+    display: block;
+    width: 20px;
+    height: 10px;
+    content: "";
+    background-position: -15px 0px;
+    background-image: url(./images/sub_mainVisual_controls2.png);
+    background-repeat: no-repeat;
+}
+
+.notice2 .play_btn .list2{
+    display: block;
+    width: 10px;
+    height: 10px;
+    content: "";
+    background-position: -40px 0px;
+    background-image: url(./images/sub_mainVisual_controls2.png);
+    background-repeat: no-repeat;
+}
+
+.notice2 .play_btn .list3{
+    display: block;
+    width: 10px;
+    height: 10px;
+    content: "";
+    background-position: -40px 0px;
+    background-image: url(./images/sub_mainVisual_controls2.png);
+    background-repeat: no-repeat;
 }
 
 .link{
     margin-top: 20px;
     width: 490px;
     display: flex;
-    justify-content:space-between;
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: space-between;
 }
+
+
 
 .link li {
     width: 235px;
     height: 56px;
     line-height: 56px;
     background-color: #fff;
-    padding: 0 10px;
     align-items: center;
+    border: 2px solid transparent;
 }
+
+
+.link li:hover {
+    border: 2px solid #18ABEB;
+    color: #18ABEB;
+    font-weight: bold;
+}
+
 
 .link li a{
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 30px;
 }
 
 
 .link li a::after{
     content: "";
     display: block;
-    width: 50px;
+    width: 42px;
     height: 40px;
     background-image: url(./images/icon_banner_group.png);
 }
 
 .link1::after{
-    background-position: 5px 0;
+    background-position: -0px 0;
     background-repeat: no-repeat;
 }
 
