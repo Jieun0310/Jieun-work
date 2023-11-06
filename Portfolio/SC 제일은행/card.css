@@ -34,11 +34,15 @@
     top: 50px;
     left: 0;
     margin-top: 20px;
+    border-right: 1px solid #474F5B;
 }
 
-.sub_gnb>ul>li{
+.sub_gnb ul > li{
+    padding: 5px;
+    font-size: 12px;
    
 }
 
-.sub_gnb > ul> li> a{
+.sub_gnb > ul > a{
+    
 }
