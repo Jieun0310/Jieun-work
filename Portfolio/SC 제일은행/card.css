@@ -239,6 +239,30 @@
     border-right: 1px solid #aeaeae;
 }
 
+.section1_card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.section1_card li{
+    width: 332px;
+    height: 392px;
+    justify-content: center;
+    align-items: center;
+}
+
+.section1_card h3{
+    font-size: 16px;
+}
+
+    .section1_card li img{
+    display: block;
+    height: 260px;
+}
+
 
 /* Section 2_ Event */
 .event_bg{
@@ -397,8 +421,7 @@
 
 .section3_gnb1{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
     margin-top: 20px;
     background-color: #fff;
     border: 1px solid #dcdcdc;
@@ -406,19 +429,79 @@
 }
 
 .section3_gnb1 li{
-    padding: 15px 0;
-    height: 50px;
-    width: 50%;
+    width: 200px;
+    height: 55px;
+    line-height: 55px;
     text-align: center;
-   
    
 }
 
 .section3_gnb1 li a{
-    display: block;
-    font-size: 14px;
-    border-right: 1px solid #dcdcdc;
+    display: flex;
+    font-size: 13px;
+    color: #5A606C;
+    gap: 5px;
+    justify-content: center;
     align-items: center;
-    text-align: center;
+    border-right: 1px solid #aeaeae;
+    height: 20px;
+    margin-top:20px;
     
 }
+
+.section3_gnb1 .icon{
+    background-image: url(./images/card/ico_fotmenu.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}
+
+.icon1{
+    background-position: 0 0
+}
+
+.icon2{
+    background-position: 0 -100px
+}
+.icon3{
+    background-position: 0 -200px
+}
+.icon4{
+    background-position: 0 -300px
+}
+.icon5{
+    background-position: 0 -400px
+}
+
+.section3_gnb2{
+    position: relative;
+    padding: 10px 0;
+    padding-left: 180px ;
+    background-color: #F2F7F9;
+    
+}
+
+.section3_gnb2 a{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #5A606C;
+    font-size: 13px;
+    
+}
+
+.section3_gnb2 img{
+    display: block;
+    width: 15px;
+    height: 13px;
+}
+
+.arrow{
+    position: absolute;
+    top: 20%;
+    left: 205px;
+    background-image: url(./images/card/ico_histroy_arrow.png);
+    width: 6px;
+    height: 13px;
+}
+
