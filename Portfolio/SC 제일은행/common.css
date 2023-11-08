@@ -158,3 +158,61 @@ body{
     width: 59px;
     height: 32px;
 }
+
+
+/* event */
+.event_titles{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.event_titles h2{
+    font-size: 32px;
+}
+
+.titles{
+    display: flex;
+    gap: 20px;
+    line-height: 1;
+}
+
+.event_titles ul{
+    display: flex;
+    line-height: 1;
+    color: #aeaeae;
+    align-items: center;
+    
+}
+
+.event_titles ul li{
+    font-size: 14px;
+    padding: 10px;
+}
+
+.event_list{
+    display: flex;
+    margin-top: 36px;
+    justify-content: space-between;
+}
+
+.event_list li a{
+    width: 230px;
+    height: 255px;  
+}
+
+
+
+.event_list li p{
+    font-weight: bold;
+    display: block;
+    height: 38px;
+}
+
+.event_list li span{
+    display: inline-block;
+    font-size: 12px;
+    height: 20px;
+
+}
+

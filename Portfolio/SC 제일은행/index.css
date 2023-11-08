@@ -104,6 +104,28 @@
     position: relative;
 }
 
+.event{
+    padding: 70px 0;
+    height: 550px;
+}
+
+.event_list li{
+    border: 5px solid transparent;
+}
+
+.event_list li a img{
+    display: block;
+    width: 230px;
+    height: 165px;
+}
+
+.contents{
+    width: 230px;
+    height: 90px;
+    background-color: #fff;
+    padding: 18px;
+}
+
 .event_bg .side_btn{
     position: absolute;
     top: 50%;
@@ -114,42 +136,6 @@
 .event_bg .side_btn i{
     background-color: #111;
 }
-
-.event{
-    padding: 70px 0;
-    height: 550px;
-}
-
-
-.event_titles{
-    display: flex;
-    justify-content: space-between;
-    
-}
-
-.event_titles h2{
-    font-size: 32px;
-}
-
-.titles{
-    display: flex;
-    gap: 20px;
-    line-height: 1;
-}
-
-.event_titles ul{
-    display: flex;
-    line-height: 1;
-    color: #aeaeae;
-    align-items: center;
-    
-}
-
-.event_titles ul li{
-    font-size: 14px;
-    padding: 10px;
-}
-
 
 
 .event_titles ul li:hover{
@@ -177,73 +163,42 @@
     color: #fff;
 }
 
-
-.event_list{
-    display: flex;
-    margin-top: 36px;
-    gap: 24px;
-}
-
-.event_list li a{
-    width: 230px;
-    height: 255px;  
-}
-
-.event_list li{
-    border: 5px solid transparent;
-}
-
 .event_list li:hover{
     border: 5px solid #18ABEB;
-}
+} */
 
-.event_list li a img{
-    display: block;
-    width: 230px;
-    height: 165px;
-}
-
-.contents{
-    width: 230px;
-    height: 90px;
-    background-color: #fff;
-    padding: 18px;
-}
-
-.event_list li p{
-    font-weight: bold;
-    display: block;
-    height: 38px;
-}
-
-.event_list li span{
-    display: inline-block;
-    font-size: 12px;
-    height: 20px;
-
-}
 
 .big_ban{
     height: 570px;
-    position: relative;
+   
 }
 
 .big_img{
+    display: block;
     background-image: url(./images/h_intro_mb_220527.jpg);
     background-position: center;
+    width: 100%;
     height: 570px;
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
+    
 }
 
 .big_contents{
     position: absolute;
+    width: 330px;
+    color: white;
     top: 25%;
-    left: 55%;
-    color: #fff;
+    left: 60%;
+}
+
+.big_contents h1{
+    display: block;
 }
 
 .big_contents p{
+    display: inline-block;
     margin: 40px 0;
 }
 
