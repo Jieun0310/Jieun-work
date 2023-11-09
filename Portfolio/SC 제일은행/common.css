@@ -124,6 +124,11 @@ body{
     border-right: 1px solid #aeaeae;
 }
 
+.f_menu1 li a:hover{
+    text-decoration: underline;
+}
+
+
 .green{
     color: #97F0A5;
 }
@@ -136,6 +141,10 @@ body{
 .f_menu2 li a{
     padding: 0 5px;
     border-right: 1px solid #aeaeae;
+}
+
+.f_menu2 li a:hover{
+    text-decoration: underline;
 }
 
 .f_others{

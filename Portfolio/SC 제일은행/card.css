@@ -88,9 +88,6 @@
 }
 
 /* slider */
-.slider{
-}
-
 .slides{
     display: Flex;
     position: relative;
@@ -244,6 +241,15 @@
     border-right: 1px solid #aeaeae;
 }
 
+.section1_gnb li:hover a{
+    color: #222;
+    font-weight: bold; 
+}
+
+.section1_gnb li:hover {
+    border-bottom: 5px solid #18ABEB;
+}
+
 .section1_card{
     display: flex;
     flex-wrap: wrap;
@@ -369,6 +375,11 @@
 }
 
 
+.event_list li p:hover{
+    text-decoration: underline;
+}
+
+
 
 /* section3 */
 .section3_bg{
@@ -442,11 +453,17 @@
     color: #aeaeae;
     border-radius: 100px;
     background-color: #fff;
+    height: 41px;
+}
+
+
+.words li a:hover{
+    color: #0085d4;
+    border: 1px solid #0085D4;
 }
 
 .btn_search{
     display: flex;
-   
     justify-content: center;
 }
 
@@ -462,6 +479,11 @@
     font-weight: bold;
 }
 
+.btn_search span:hover{
+    background-color: #0085d4;
+    color: #fff;
+    cursor: pointer;
+}
 
 .section3_gnb1{
     display: flex;
@@ -490,8 +512,13 @@
     border-right: 1px solid #aeaeae;
     height: 20px;
     margin-top:20px;
-    
 }
+
+.section3_gnb1 li span:hover{
+    text-decoration: underline;
+}
+
+
 
 .section3_gnb1 .icon{
     background-image: url(./images/card/ico_fotmenu.png);
@@ -542,7 +569,7 @@
 
 .arrow{
     position: absolute;
-    top: 20%;
+    top: 35%;
     left: 205px;
     background-image: url(./images/card/ico_histroy_arrow.png);
     width: 6px;

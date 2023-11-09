@@ -1,3 +1,23 @@
+.side_btn{
+    display: flex;
+    gap: 1100px;
+}
+
+.side a{
+    display: block;
+    background-color: rgba(0,0,0,0.2);
+    color: #fff;
+    font-size: 32px;
+    text-align: center;
+    align-items: center;
+    width: 40px;
+    height: 60px;
+    line-height: 60px;
+}
+
+
+
+
 /* slider */
 
 .slider{
@@ -133,9 +153,6 @@
     transform: translate(-50%,-50%);
 }
 
-.event_bg .side_btn i{
-    background-color: #111;
-}
 
 
 .event_titles ul li:hover{
