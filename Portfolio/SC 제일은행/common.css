@@ -222,6 +222,57 @@ body{
     display: inline-block;
     font-size: 12px;
     height: 20px;
+}
 
+/* play_btn */
+
+.play_btn .stop{
+    display: block;
+    width: 10px;
+    height: 10px;
+    content: "";
+    background-position: 0px 0px;
+    background-image: url(./images/sub_mainVisual_controls2.png);
+    background-repeat: no-repeat;
+}
+
+.play_btn .list1{
+    display: block;
+    width: 20px;
+    height: 10px;
+    content: "";
+    background-position: -15px 0px;
+    background-image: url(./images/sub_mainVisual_controls2.png);
+    background-repeat: no-repeat;
+}
+
+.play_btn .list2{
+    display: block;
+    width: 10px;
+    height: 10px;
+    content: "";
+    background-position: -40px 0px;
+    background-image: url(./images/sub_mainVisual_controls2.png);
+    background-repeat: no-repeat;
+}
+
+.play_btn .list3{
+    display: block;
+    width: 10px;
+    height: 10px;
+    content: "";
+    background-position: -40px 0px;
+    background-image: url(./images/sub_mainVisual_controls2.png);
+    background-repeat: no-repeat;
+}
+
+.play_btn .list4{
+    display: block;
+    width: 10px;
+    height: 10px;
+    content: "";
+    background-position: -40px 0px;
+    background-image: url(./images/sub_mainVisual_controls2.png);
+    background-repeat: no-repeat;
 }
 

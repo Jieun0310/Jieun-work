@@ -15,9 +15,6 @@
     line-height: 60px;
 }
 
-
-
-
 /* slider */
 
 .slider{
@@ -40,25 +37,25 @@
     left: 50%;
 }
 
-.slider .play_btn .stop{
-    display: block;
-    width: 10px;
-    height: 10px;
-    content: "";
-    background-position: 0px 0px;
+.stop{
     background-image: url(./images/sub_mainVisual_controls2.png);
     background-repeat: no-repeat;
+    width: 12px;
+    height: 10px;
 }
 
-.slider .play_btn .list1{
-    display: block;
-    width: 25px;
-    height: 10px;
-    content: "";
-    background-position: -15px 0px;
+.play_list{
     background-image: url(./images/sub_mainVisual_controls2.png);
     background-repeat: no-repeat;
+    background-position: 50% -8%;
+    width:20px;
+    height: 20px;
+
 }
+
+
+
+
 
 .slide{
     background-image: url(./images/1081850_221014_h_main_vis_hdcd.png);
@@ -152,8 +149,6 @@
     left: 50%;
     transform: translate(-50%,-50%);
 }
-
-
 
 .event_titles ul li:hover{
     color: #18ABEB;
@@ -391,46 +386,6 @@
     top: 42%;
     left: 50%;
     transform: translate(-42%,-50%);
-}
-
-.notice2 .play_btn .stop{
-    display: block;
-    width: 10px;
-    height: 10px;
-    content: "";
-    background-position: 0px 0px;
-    background-image: url(./images/sub_mainVisual_controls2.png);
-    background-repeat: no-repeat;
-}
-
-.notice2 .play_btn .list1{
-    display: block;
-    width: 20px;
-    height: 10px;
-    content: "";
-    background-position: -15px 0px;
-    background-image: url(./images/sub_mainVisual_controls2.png);
-    background-repeat: no-repeat;
-}
-
-.notice2 .play_btn .list2{
-    display: block;
-    width: 10px;
-    height: 10px;
-    content: "";
-    background-position: -40px 0px;
-    background-image: url(./images/sub_mainVisual_controls2.png);
-    background-repeat: no-repeat;
-}
-
-.notice2 .play_btn .list3{
-    display: block;
-    width: 10px;
-    height: 10px;
-    content: "";
-    background-position: -40px 0px;
-    background-image: url(./images/sub_mainVisual_controls2.png);
-    background-repeat: no-repeat;
 }
 
 .link{
