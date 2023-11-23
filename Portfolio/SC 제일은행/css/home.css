@@ -1,0 +1,186 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+body{
+    background-color: #fff;
+}
+
+/* header */
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+}   
+
+.logo img{
+    display: block;
+    width: 130px;
+    height: 50px;
+}
+
+.gnb_area{
+    display: flex;
+    align-items: center;
+}
+
+.gnb1{
+    display: flex;
+    gap: 36px;
+    align-items: center;
+    font-weight: bold;
+    margin-left: 95px;
+    margin-right: 73px;
+}
+
+.login{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    background-color: #18ABEB;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 4px;
+}
+
+.login img{
+    display: block;
+    height: 15px;
+}
+
+.gnb2{
+    display: flex;
+    gap: 4px;
+    margin: 0 12px;
+    font-size: 12px;
+}
+
+.gnb2 li{
+    padding: 0 6px;
+    border-right: 1px solid #ddd;
+}
+
+.gnb2 li:last-child{
+    border-right:none
+}
+
+.search{
+    display: block;
+}
+
+/* slider */
+
+.slider{  
+    position: relative;
+}
+
+.slides{
+    position: relative;
+}
+
+
+.slide_01{
+    position: relative;
+}
+
+.slide_01 img{
+    display: block;
+    width: 100%;
+    height: 455px;
+    object-fit: cover;
+}
+
+.slide_01 .texts{
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-30%,-30%);
+    color: #fff;
+}
+
+.slide_01 .texts h2{
+    font-size: 32px;
+}
+
+.slide_01 .texts p{
+    margin: 24px 0;
+    font-size: 16px;
+}
+
+.slide_01 .texts a span{
+    display: inline-block;
+    padding: 12px 20px;
+    text-align: center;
+    border: 1px solid #fff;
+}
+
+.arrow{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    gap: 1000px;
+    justify-content: space-between; 
+} 
+
+.arrow i{
+    display: block;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+    color: #fff;
+    height: 46px;
+    line-height: 46px;
+    width: 30px;  
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* <!-- 질문하기 --> */
+.control{
+    position: absolute;
+    color: #222;
+    top: 89.4%;
+    left: 47%;   
+    transform: rotateY(-47%);
+}
+
+
+/* slick-dots */
+.slick-dots{
+    bottom: 30px;
+    
+}
+
+.slick-dots li button::before{
+    content: '';
+   
+}
+
+.slick-dots li{
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: rgba(0,0,0,0.3);
+    transition: all 0.3s;
+}
+
+.slick-dots li.slick-active{
+    background-color: #222;
+    width: 20px;
+    border-radius: 20px;
+
+}
+

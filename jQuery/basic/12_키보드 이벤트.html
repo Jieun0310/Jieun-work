@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery_키보드 이벤트</title>
+    <script src="./js/jquery-3.7.1.js"></script>
+</head>
+
+<body>
+    <h1>키보드 이벤트</h1>
+
+    <p>
+        <input type="text" id="keyValue">
+    </p>
+
+    <script>
+        //keydown() 모든 키에 이벤트가 발생한다. (한글키 제외)
+        //keypress() 기능 키 제외 (F1~, alt, ctrl, shift....)
+        //keyup() 
+
+        $(document).on('keydown',keyFuc);
+
+
+        function keyFuc(event){
+            var result = ''
+
+            switch (event.keyCode) {
+                case 37:
+                    result = 'left'
+                    break;
+
+                case 38:
+                    result = 'top'
+                    break;
+
+                case 39:
+                    result = 'right'
+                    break;
+
+                case 40:
+                    result = 'bottom'
+                    break;
+
+                default :
+                    result = event.keyCode;
+            }
+
+            $('#keyValue').val(result)
+        }
+    </script>
+
+
+</body>
+</html>

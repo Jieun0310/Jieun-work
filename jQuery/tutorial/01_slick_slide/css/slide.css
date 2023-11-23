@@ -1,0 +1,193 @@
+.slider_container{
+    position: relative;
+}
+
+.slide_01{}
+
+.slide_01 .item{
+    height: 600px;
+    background-color: orange;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+.slide_01 .item.item_01{
+    background-image: url(../../images/slide_01.jpg);
+}
+.slide_01 .item.item_02{
+    background-image: url(../../images/slide_02.jpg);
+}
+.slide_01 .item.item_03{
+    background-image: url(../../images/slide_03.jpg);
+}
+
+.slide_text{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.slide_text h4{
+    font-size: 60px;
+    font-weight: bold;
+    animation-name: ani_scale;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    /* animation: ani_scale 0.5s forward; */
+}
+
+.slide_text i{
+    display: block;
+    margin: 36px 0;
+    font-size: 36px;
+    animation-delay: 0.5s;
+    animation: ani_rotate 0.5s 0.8s forwards;
+    opacity: 0;
+}
+
+.slide_text p{
+    position: relative;
+    margin-bottom: 32px;
+    opacity: 0;
+    animation: ani_bottom_top 0.5s 0.8s forwards;
+
+}
+
+.slide_text a{
+    position: relative;
+    display: inline-block;
+    background-color: #265073;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    opacity: 0;
+    animation: ani_top_bottom 0.5s 0.8s forwards;
+}
+
+.arrows{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    
+}
+
+.arrows img{
+    cursor: pointer;
+    opacity: 0.4;
+    transition: all 0.5s;
+}
+
+.arrows img:hover{
+    opacity: 1;
+}
+
+@keyframes ani_scale{
+    0% {
+        transform: scale(2);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+@keyframes ani_rotate {
+    0% {
+        opacity: 0;
+        transform: rotate(180deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes ani_bottom_top {
+    0% {
+        top: 20px ;
+        opacity: 0;
+    }
+    100% {
+        top: 0px ;
+        opacity: 1;
+    }
+}
+@keyframes ani_top_bottom {
+    0% {
+        opacity: 0;
+        top: -20px ;
+    }
+    100% {
+        opacity: 1;
+        top: 0px ;
+    }
+}
+
+/* slick-dots */     /* 인라인요소보다  !importan 가 더 우선 순위 */
+.slick-dots{
+    bottom: 30px;
+}
+
+.slick-dots li button::before{
+    content: '';
+}
+
+.slick-dots li{
+    width: 30px;
+    height: 4px;
+    background-color: rgba(0,0,0,0.3);
+    transition: all 0.3s;
+}
+
+
+.slick-dots li.slick-active{
+    background-color: rgba(0,0,0,1);
+    width: 80px;
+}
+
+/* slid_02 */
+.slide_02{}
+
+.control{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.control .slide_counter{
+    height: 30px;
+    padding: 0 10px;
+    background-color: rgba(255,255,255,0.5);
+}
+
+.control .btns{
+    display: flex;
+    gap: 10px;
+}
+
+.control .btns i{
+    width: 30px;
+    height: 30px;
+    background-color: #eee;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 100%;
+} 

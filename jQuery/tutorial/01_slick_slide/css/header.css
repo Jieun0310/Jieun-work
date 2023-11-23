@@ -1,0 +1,35 @@
+.header_container{
+    border-bottom: 1px solid #ccc;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 0 30px;
+}
+
+.logo{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.gnb{
+    display: flex;
+}
+
+.gnb li a{
+    display: block;
+    padding: 30px 40px;
+    font-weight: bold;
+}
+
+.gnb li.active{
+    color: tomato;
+    border-bottom: 1px solid tomato;
+}
+
+button{
+    padding: 6px 12px;
+}

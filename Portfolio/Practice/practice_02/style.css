@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: #222;
+    color: white;
+}
+
+img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.slider_container{
+    position: relative;
+}
+
+.slide_text{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.slide_text h3{
+    font-size: 30px;
+    animation-name: ani_scale;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes ani_scale{
+    0%{
+        transform: scale(2);
+        opacity: 0;
+    }
+    100%{
+      transform: scale(1);
+      opacity: 1;
+    }
+}
+
+.slide_text i{
+    display: block;
+    margin: 20px 0;
+    font-size: 36px;
+    animation-delay: 0.5s;
+    animation: ani_rotate 0.5s 0.8s forwards;
+    opacity: 0; 
+}
+
+@keyframes ani_rotate{
+    0% {
+        opacity: 0;
+        transform: rotate(180deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+
+.slide_text a{
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    padding: 5px 15px;
+    background-color: #fff;
+    color: #222;
+    border-radius: 20px;
+    opacity: 0;
+    animation: ani_top_bottom 0.5s 0.8s forwards;
+}
+
+@keyframes ani_top_bottom{
+    0%{
+        top: 10px;
+        opacity: 0;
+    }
+    100% {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+.arrows{
+    display: flex;
+    gap: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+.arrows i{
+    display: block;
+    text-align: center;
+    background-color: rgba(0,0,0,0.6);
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 100%;
+}
+
+/* slick-dots */
+.slick-dots{
+    bottom: 30px;
+}
+
+.slick-dots li button::before{
+    content: '';
+}
+
+.slick-dots li {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 100%;
+    transition: all 0.3s;
+}
+
+.slick-dots li.slick-active {
+    background-color: #222;
+    width: 20px;
+    border-radius: 20px;
+}

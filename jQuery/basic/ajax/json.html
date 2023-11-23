@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/jquery-3.7.1.js"></script>
+    <title>ajax - jason</title>
+    <style>
+        .tb1{
+            border-collapse: collapse;
+        }   
+        .tb1 td{
+            border: 1px solid #ddd;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="title"></div>
+        <div class="list"></div>
+
+        <script>
+            $('.title').load('./title.html')
+            $.ajax({
+                url: './db/user.json',
+                success: function(data) {
+                  
+                   if(data.length > 0){
+                        var tbl = $('<table/>').addClass('tbl')
+
+                        $.each(data, function(index, item){
+                            var row = $('<tr/>').append(
+                                $('<td/>').text(item.id),
+                                $('<td/>').text(item.first_name),
+                                $('<td/>').text(item.last_name),
+                                $('<td/>').text(item.email),
+                                $('<td/>').text(item.gender),
+                            )
+                            tbl.append(row)
+                        })
+                        $('.list').append(tbl)
+                   }
+                },
+                error: function(){
+                    $('.list').text('"데이타를 불러오지 못했습니다."')
+                }
+            })
+        </script>
+    </div>
+</body>
+</html>

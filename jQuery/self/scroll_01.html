@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>메뉴 이동 예제</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #menu {
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    #menu a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    #menu a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    #section1, #section2, #section3 {
+      padding: 50px;
+      margin-top: 50px;
+      height: 500px;
+      background-color: #f1f1f1;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div id="menu">
+  <a href="#section1">섹션 1</a>
+  <a href="#section2">섹션 2</a>
+  <a href="#section3">섹션 3</a>
+</div>
+
+<div id="section1">
+  <h2>섹션 1</h2>
+  <p>이곳은 섹션 1입니다.</p>
+</div>
+
+<div id="section2">
+  <h2>섹션 2</h2>
+  <p>이곳은 섹션 2입니다.</p>
+</div>
+
+<div id="section3">
+  <h2>섹션 3</h2>
+  <p>이곳은 섹션 3입니다.</p>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+
+  // JavaScript 부분
+//   document.addEventListener('DOMContentLoaded', function() {
+//     // 메뉴 항목 클릭 시 스크롤링
+//     var menuLinks = document.querySelectorAll("#menu a");
+
+//     menuLinks.forEach(function(link) {
+//       link.addEventListener('click', function(event) {
+//         if (this.hash !== "") {
+//           event.preventDefault();
+//           var hash = this.hash;
+//           document.querySelector(hash).scrollIntoView({
+//             behavior: 'smooth'
+//           });
+//         }
+//       });
+//     });
+//   });
+
+   // jQuery 부분
+   $(document).ready(function(){
+    // 메뉴 항목 클릭 시 스크롤링
+    $("#menu a").on('click', function(event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+        var hash = this.hash;
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function(){
+          window.location.hash = hash;
+        });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

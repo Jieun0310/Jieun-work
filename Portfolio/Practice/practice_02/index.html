@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <script src="./jquery-1.12.3.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+
+<body>
+
+    <div class="slider_container">
+        <div class="slides">
+            <div class="slide1"><img src="./slide_01.jpg" alt=""></div>
+            <div class="slide2"><img src="./slide_02.jpg" alt=""></div>
+            <div class="slide3"><img src="./slide_03.jpg" alt=""></div>
+        </div>
+        
+        <div class="slide_text">
+            <h3>다채로운 색감 조합</h3>
+            <p>아름답고 조화로운 색상</p>
+            <i class="xi-emoticon-smiley-o"></i>
+            <a href="#">둘러보기</a>
+        </div>
+
+        <div class="arrows">
+           <a href="#"><i id="left" class="xi-angle-left-thin"></i></a>
+           <a href="#"><i id="right" class="xi-angle-right-thin"></i></a>
+        </div>
+
+        <div class="control">
+            <div class="btns">
+                <i class="xi-pause"></i>    
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('.slides').slick({
+            dots:true,
+            autoplay: true,
+            prevArrow:$('#left'),
+            nextArrow:$('#right'),
+            autoplaySpeed:2000,
+        });
+    </script>
+    
+</body>
+</html>

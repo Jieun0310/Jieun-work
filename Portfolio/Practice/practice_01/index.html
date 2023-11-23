@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./jquery-1.12.3.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="./images/logo.png" alt="logo"></div>
+        <ul id="gnb">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+
+    <!-- section -->
+    <section>
+        <img src="./images/shooting_star.png" id="shooting_star">
+        <img src="./images/star.png" id="star">
+        <img src="./images/moon.png" id="moon">
+        <h2 id="text">안녕하세요</h2>
+        <img src="./images/mountain.png" id="mountain">
+        <img src="./images/tree.png" id="tree">
+        <a href="#sec" id="btn">Explore</a>
+    </section>
+
+    <div class="sec" id="sec">
+        <h2>Intro</h2>
+        <p>
+            저의 웹사이트에 찾아주신 모든 분들 환영합니다! <br><br>
+            이 곳에서는 제 다양한 작품들을 직접 만나보실 수 있습니다<br>
+            편안하게 살펴보시고, 궁금한 사항이나 솔직한 피드백은 언제든 환영합니다.<br>
+            여러분과의 소통을 통해 더 나은 작품을 만들어 나가고 싶습니다. <br>
+            자유롭게 의견을 나눠주세요. 
+        </p>
+    </div>
+
+    <script>
+        $(function(){
+            let star = document.getElementById('star')
+            let moon = document.getElementById('moon')
+            let mountain = document.getElementById('mountain')
+            let shooting_star = document.getElementById('shooting_star')
+            let tree = document.getElementById('tree')
+            let text = document.getElementById('text')
+            let btn = document.getElementById('btn')
+            let header = document.querySelector('header')
+
+            window.addEventListener('scroll',function(){
+                let value = window.scrollY;
+                star.style.left = value * 0.25 + 'px';
+                moon.style.left = value * 0.5 + 'px';
+                moon.style.marginTop = value * 2 + 'px';
+                mountain.style.left = value * 0 + 'px';
+                shooting_star.style.right = value * 0.5 + 'px';
+                tree.style.left = value * 0 + 'px';
+                text.style.marginRight = value * 6 + 'px';
+                btn.style.marginTop = value * 1.2 + 'px';
+                header.style.top = value * 1.05 + 'px';
+            })
+             
+        })
+    </script>
+
+    
+</body>
+</html>
