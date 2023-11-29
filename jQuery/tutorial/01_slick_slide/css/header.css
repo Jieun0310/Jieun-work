@@ -25,7 +25,7 @@ header{
     font-weight: bold;
 }
 
-.gnb li.active{
+.gnb li.on{
     color: tomato;
     border-bottom: 1px solid tomato;
 }

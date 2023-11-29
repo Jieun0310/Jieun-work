@@ -191,3 +191,34 @@
     cursor: pointer;
     border-radius: 100%;
 } 
+
+/* 슬라이드03 */
+.slide_03 img {
+    width: 250px;
+}
+
+.slide03_arrows {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 30px;
+}
+
+.slide03_arrows i {
+    cursor: pointer;
+}
+
+.slide03_arrows i.xi-long-arrow-left {
+    opacity: 0.3;
+}
+
+.slide_03 .slick-list {
+    overflow: initial;
+}
+
+
+
+

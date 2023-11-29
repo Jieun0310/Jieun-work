@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery_Full page</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.extensions.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="header">
+        <span class="bars"><i class="xi-bars"></i></span>
+    </div>
+
+    <ul class="nav">
+        <li><a data-menuanchor="'page1" href="#page1" class="active">html</a></li>
+        <li><a data-menuanchor="'page2" href="#page2">css</a></li>
+        <li><a data-menuanchor="'page3" href="#page3">javascript</a></li>
+        <li><a data-menuanchor="'page4" href="#page4">jquery</a></li>
+    </ul>
+
+    <div class="fullpage">
+        <div class="section">
+            <div class="item">
+                <h4>Hello html</h4>
+                <ul class="photos">
+                    <li><img src="../images/img_01.jpg" alt=""></li>
+                    <li><img src="../images/img_02.jpg" alt=""></li>
+                    <li><img src="../images/img_03.jpg" alt=""></li>
+                    <li><img src="../images/img_04.jpg" alt=""></li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <div class="item">
+                <h4>Hello css</h4>
+            </div>
+        </div>
+        <div class="section">
+            <div class="item">
+                <h4>Hello javascript</h4>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum pariatur, quibusdam soluta nulla aut quo cupiditate quas, perspiciatis nobis dolor accusamus a eos totam illo itaque, cumque suscipit consequuntur non facere qui voluptate! Ex eveniet ratione nostrum iure! Minus porro voluptatem necessitatibus ullam sed nam tempore mollitia. Tempora, necessitatibus itaque?
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="item">
+                <h4>Hello Jquery</h4>
+                <ul class="photo">
+                    <li><img src="../images/img_01.jpg" alt=""></li>
+                    <li><img src="../images/img_02.jpg" alt=""></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function(){
+            $('.bars').on('click',function(){
+                $('.nav').toggleClass('active')
+
+            if($(this).find('i').hasClass('xi-bars')){
+                $(this).find('i').attr('class','xi-angle-left')
+            } else {
+                $(this).find('i').attr('class','xi-bars')
+            }
+            }) 
+
+            // fullpage
+            $('.fullpage').fullpage({
+                autoScrolling: true,
+                navigation: true,
+                menu: '.nav',
+                anchors:['page1', 'page2','page3','page4'],
+
+                onLeave: function(index, nextIndex, direction){
+                    var leavingSection = $(this);
+
+                    //after leaving section 2
+                    if(index == 2 && direction =='down'){
+                        alert("Going to section 3!");
+                    }
+
+                    else if(index == 2 && direction == 'up'){
+                        alert("Going to section 1!");
+                    }
+                }
+            })
+
+            
+            
+        })
+    </script>
+</body>
+</html>
