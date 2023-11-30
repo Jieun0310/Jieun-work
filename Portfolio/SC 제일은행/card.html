@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SC제일은행_Card</title>
+    <title>금융상품몰 - SC제일은행_Card</title>
 
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
@@ -19,20 +19,80 @@
     <div class="header_area">
     </div>
 
-    <ul class="sub_nav">
-        <div class="container">
-            <ul class="sub_nav list">
-                <li><a href="#">예/적금</a></li>
-                <li><a href="#">카드</a></li>
-                <li><a href="#">대출</a></li>
-                <li><a href="#">펀드/신탁</a></li>
-                <li><a href="#">보험</a></li>
-                <li><a href="#">외환</a></li>
-                <li><a href="#">방문상담 신청</a></li>
-            </ul>
-        </div>
-
-    </ul>
+    <div class="nav_area">
+        <ul class="nav">
+            <li>
+                <a href="#">예/적금</a>
+                <ul class="sub">
+                    <li><a href="#">베스트상품</a></li>
+                    <li><a href="#">온라인 예금가입</a></li>
+                    <li><a href="#">예금상담신청</a></li>
+                    <li><a href="#">예금가이드</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">카드</a>
+                <ul class="sub">
+                    <li><a href="#">SC제일은행 현대카드</a></li>
+                    <li><a href="#">SC제일은행 삼성카드</a></li>
+                    <li><a href="#">SC제일은행 비씨카드</a></li>
+                    <li><a href="#">SC제일은행X MARVEL</a></li>
+                    <li><a href="#">SC제일은행X Disney</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">대출</a>
+                <ul class="sub">
+                    <li><a href="#">인기상품</a></li>
+                    <li><a href="#">대출금리 안내</a></li>
+                    <li><a href="#">금리인하요구권</a></li>
+                    <li><a href="#">대출계약철회권</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">펀드/신탁</a>
+                <ul class="sub">
+                    <li><a href="#">수익률 베스트</a></li>
+                    <li><a href="#">고객가입 베스트</a></li>
+                    <li><a href="#">개인종합자산관리 계좌(ISA)</a></li>
+                    <li><a href="#">특정금전신탁</a></li>
+                    <li><a href="#">신탁가이드</a></li>
+                    <li><a href="#">펀드공시</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">보험</a>
+                <ul class="sub">
+                    <li><a href="#">목돈 마련하기</a></li>
+                    <li><a href="#">노후 준비하기</a></li>
+                    <li><a href="#">위험대비하기</a></li>
+                    <li><a href="#">보험 가이드</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">외환</a>
+                <ul class="sub">
+                    <li><a href="#">송금</a></li>
+                    <li><a href="#">환율안내</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">방문상담 신청</a>
+                <ul class="sub">
+                    <div class="sub1">
+                        <li><a href="#">신청하기</a></li>
+                        <li><a href="#">직원조회서비스</a></li>
+                    </div>
+                    <div class="sub2">
+                        <li><a href="#"><img src="./images/card/ico_gnb_btn1.png" alt="">나만의 맞춤상품</a></li>
+                        <li><a href="#"><img src="./images/card/ico_gnb_btn2.png" alt="">진행중인 이벤트</a></li>
+                        <li><a href="#"><img src="./images/card/ico_gnb_btn3.png" alt="">나만의 맞춤상품</a></li>
+            
+                    </div>
+                </ul>
+            </li>
+        </ul>
+    </div>
 
     <div class="slider">
         <div class="slides">
@@ -244,6 +304,23 @@
          </div>
     </div>
 
+    <div class="f_nav">
+        <ul class="f_nav01">
+            <li><a href="#"><span class="a"></span>금리안내</a></li>
+            <li><a href="#"><span class="b"></span>환율안내</a></li>
+            <li><a href="#"><span class="c"></span>수수료안내</a></li>
+            <li><a href="#"><span class="d"></span>예금가이드</a></li>
+            <li><a href="#"><span class="e"></span>이용시간안내</a></li>
+        </ul>
+        <div class="f_nav02">
+            <a href="#">
+            <img src="./images/card/ico_history.png" alt="ico_history">
+            <img src="./images/card/ico_histroy_arrow.png" alt="ico_histroy_arrow">
+            <span>금융상품몰</span>
+             </a>
+        </div>
+    </div>
+
     <footer class="footer">
     </footer>
     
@@ -278,6 +355,15 @@
                         $('.slides').slick('slickPlay')
                     }
                 })
+
+            $('.nav li').mouseenter(function(){
+                $('.sub').stop().slideDown()
+            })
+            $('.nav li').mouseleave(function(){
+                $('.sub').stop().slideUp()
+            })
+
+            
     </script>
 </body>
 </html>
