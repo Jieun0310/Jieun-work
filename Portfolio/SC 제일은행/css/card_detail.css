@@ -1,0 +1,266 @@
+
+.header_card{
+    display: flex;
+    align-items: center;justify-content: space-between;
+    font-size: 12px;
+    height: 50px;
+}
+
+header img{
+    display: inline-block;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.card_btn{
+    display: flex;
+    gap: 50px;
+}
+
+.right{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.card_login{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 15px 5px 10px;
+    border: 1px solid #2CAB1C;
+    border-radius: 6px;
+}
+
+.nav{
+    background-color: #fff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+}
+
+.nav_titles{
+    display: flex;
+    
+}
+
+.nav_titles h4{
+    font-weight: normal;
+    padding: 27px 20px;
+    text-align: center;
+}
+
+.date{
+    margin: 15px 0;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    color: #818181;
+    margin-left: 85%;   
+}
+
+.selector{
+    width: 315px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.selector a{
+    display: block;
+    padding: 15px;
+    border: 1px solid #C0C0C0;
+}
+
+.title{
+    height: 47px;
+    line-height: 47px;
+    background-color: #223354;
+    width: 940px;
+    margin: 30px 0;
+}
+
+.title h3{
+    font-size: 16px;
+    color: white;
+    padding-left: 20px;
+    font-weight: normal;
+}
+
+.card_detail{
+    width: 940px;
+    height: 445px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.image_area{
+    margin: 20px;
+}
+
+.image_area img{
+    display: block;
+    width: 170px;
+    height: 270px;
+}
+
+.image_area a{
+   
+    display: block;
+    margin: 10px auto;
+    width: 135px;
+    font-size: 12px;
+    padding: 5px 20px;
+    text-align: center;
+    background: linear-gradient(to top, #ddd 20%, #ebebeb 60% );
+    border: 1px solid #939393;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.info{
+    padding: 20px 0;
+}
+
+.info h3{
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.text{
+    margin: 15px 0;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #696969;
+}
+.text p{
+    padding: 5px 0;
+}
+
+.info p{
+    font-size: 12px;
+    color: #696969;
+}
+
+.qr_area{
+    margin: auto 0;
+}
+
+.qr_area img{
+    display: block;
+    width: 82px;
+    height: 81px;
+    margin: 0 auto;
+}
+
+
+.qr_area span{
+    display: block;
+    width: 81px;
+    padding: 5px 0;
+    font-size: 12px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+}
+.qr_area p{
+    width: 150px;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.caution{
+    position: relative;
+    width: 940px;
+    height: 470px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin:30px 0 ;
+}
+
+.caution_text{
+    padding: 0px 30px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    line-height: 1.6;
+    font-size: 12px;
+    border-bottom: 1px solid #b9b9b9;
+}
+
+.caution_text p:last-child{
+    padding-top: 20px;
+}
+
+.caution a{
+    position: absolute;
+    top: 90%;
+    right: 3%;
+    padding: 10px 30px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 4px;
+    background: linear-gradient(to bottom, #34a026 40%, #17680c 100% );
+}
+
+.line{
+    width: 940px;
+    height: 35px;
+    background: linear-gradient(to bottom, #DEDEDE 30%, #DEDEDE 100% );
+    border: 1px solid #DEDEDE;
+}
+
+.footer_area{
+    display: flex;
+    margin: 20px;
+    font-size: 12px;
+}
+.footer_area h4{
+    color: #1C4E64;
+    font-size: 14px;
+}
+
+.f_left{
+    margin-right: 100px;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    line-height: 1.5;
+}
+
+
+.left1-1{
+    margin-bottom: 20px;
+}
+
+.left2 img{
+    display: block;
+    margin-bottom: 15px;
+}
+
+.f_right{
+    padding: 0 20px;
+}
+
+
+.right_group{
+    display: flex;
+    align-items: center;
+    gap:100px;
+    margin-bottom: 76px;
+}
+
+.right_group h4{
+    color: #33AE23;
+    margin-bottom: 10px;
+}
+
+.footer_area p{
+    color: #33AE23;
+}
