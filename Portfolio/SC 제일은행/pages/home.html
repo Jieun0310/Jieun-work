@@ -17,8 +17,7 @@
 </head>
 
 <body>
-    <div class="header_area">
-    </div>
+    <div class="header_area"></div>
 
     <div class="slider">
         <div class="slides">
@@ -79,7 +78,7 @@
             </div>
 
             <ul class="event_list">
-                <li>
+                <!-- <li>
                     <div class="photo">
                         <img src="../images/banner1.jpg" alt="banner1 img">
                     </div>
@@ -87,71 +86,7 @@
                         <p>SC제일은행 X 현대카드 특별 이벤트</p>
                         <span>2023.11.01 ~ 2023.11.30</span>
                     </div>
-                </li>
-                <li>
-                    <div class="photo">
-                        <img src="../images/banner2.png" alt="banner1 img">
-                    </div>
-                    <div class="event_text">
-                        <p>이노베이션 수상기념 / 수수료 면제 이벤트</p>
-                        <span>2023.01.01 ~ 2023.12.31</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="photo">
-                        <img src="../images/banner3.jpg" alt="banner1 img">
-                    </div>
-                    <div class="event_text">
-                        <p>2023 PB마케팅프로그램</p>
-                        <span>2023.02.22 ~ 2023.12.29</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="photo">
-                        <img src="../images/banner4.gif" alt="banner1 img">
-                    </div>
-                    <div class="event_text">
-                        <p>금융결제원 CMS 신규 계약 이벤트</p>
-                        <span>2023.01.02 ~ 2023.12.31</span>
-                    </div>                    
-                </li>
-
-                <li>
-                    <div class="photo">
-                        <img src="../images/banner1.jpg" alt="banner1 img">
-                    </div>
-                    <div class="event_text">
-                        <p>SC제일은행 X 현대카드 특별 이벤트</p>
-                        <span>2023.11.01 ~ 2023.11.30</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="photo">
-                        <img src="../images/banner2.png" alt="banner1 img">
-                    </div>
-                    <div class="event_text">
-                        <p>이노베이션 수상기념 / 수수료 면제 이벤트</p>
-                        <span>2023.01.01 ~ 2023.12.31</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="photo">
-                        <img src="../images/banner3.jpg" alt="banner1 img">
-                    </div>
-                    <div class="event_text">
-                        <p>2023 PB마케팅프로그램</p>
-                        <span>2023.02.22 ~ 2023.12.29</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="photo">
-                        <img src="../images/banner4.gif" alt="banner1 img">
-                    </div>
-                    <div class="event_text">
-                        <p>금융결제원 CMS 신규 계약 이벤트</p>
-                        <span>2023.01.02 ~ 2023.12.31</span>
-                    </div>                    
-                </li>          
+                </li> -->                      
             </ul>
 
             <div class="arrow event">
@@ -318,6 +253,35 @@
                 })
 
             // Event
+           
+            const items = [
+            {id:1, url:'../images/banner1.jpg' ,title:'SC제일은행 X 현대카드 특별 이벤트', data:'2023.11.01 ~ 2023.11.30' },
+            {id:2, url:'../images/banner2.png' ,title:'이노베이션 수상기념 / 수수료 면제 이벤트', data:'2023.01.01 ~ 2023.12.31' },
+            {id:3, url:'../images/banner3.jpg' ,title:'2023 PB마케팅프로그램', data:'2023.02.22 ~ 2023.12.29' },
+            {id:4, url:'../images/banner4.gif' ,title:'금융결제원 CMS 신규 계약 이벤트', data:'2023.01.02 ~ 2023.12.31' },
+            {id:5, url:'../images/banner1.jpg' ,title:'SC제일은행 X 현대카드 특별 이벤트', data:'2023.11.01 ~ 2023.11.30' },
+            {id:6, url:'../images/banner2.png' ,title:'이노베이션 수상기념 / 수수료 면제 이벤트', data:'2023.01.01 ~ 2023.12.31' },
+            {id:7, url:'../images/banner3.jpg' ,title:'2023 PB마케팅프로그램', data:'2023.02.22 ~ 2023.12.29' },
+            {id:8, url:'../images/banner4.gif' ,title:'금융결제원 CMS 신규 계약 이벤트', data:'2023.01.02 ~ 2023.12.31' },
+            ]
+
+            items.forEach(item =>{
+                // console.log(item)
+
+                var row = `
+                <li>
+                    <div class="photo">
+                        <img src=${item.url} alt="banner1 img">
+                    </div>
+                    <div class="event_text">
+                        <p>${item.title}</p>
+                        <span>${item.data}</span>
+                    </div> 
+                </li>       
+                   `
+                $('.event_list').append(row)
+            })
+
             $('.event_list').slick({
                 infinite: true,
                 slidesToShow: 4,
