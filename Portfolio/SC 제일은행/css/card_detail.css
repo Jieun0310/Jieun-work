@@ -72,6 +72,7 @@ header img{
     display: block;
     padding: 15px;
     border: 1px solid #C0C0C0;
+    margin-right: -1px;
 }
 
 .title{
@@ -183,6 +184,7 @@ header img{
     background-color: #fff;
     border: 1px solid #ddd;
     margin:30px 0 ;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
 }
 
 .caution_text{
@@ -209,43 +211,44 @@ header img{
     background: linear-gradient(to bottom, #34a026 40%, #17680c 100% );
 }
 
-.line{
-    width: 940px;
-    height: 35px;
-    background: linear-gradient(to bottom, #DEDEDE 30%, #DEDEDE 100% );
-    border: 1px solid #DEDEDE;
-}
 
 .footer_area{
-    display: flex;
-    margin: 20px;
     font-size: 12px;
+    background-color: #F9F9F9;
+    height: 293px;
 }
+
 .footer_area h4{
     color: #1C4E64;
     font-size: 14px;
 }
 
-.f_left{
-    margin-right: 100px;
+.line{
+    width: 940px;
+    height: 35px;
+    background: linear-gradient(to bottom, #ffffff 20%, #f3f3f3 50% );
+    border-top: 1px solid #DEDEDE;
+    border-bottom: 1px solid #DEDEDE;
+}
+
+.f_info{
     display: flex;
-    justify-content: space-between;
-    gap: 50px;
-    line-height: 1.5;
+    gap: 120px;
+    margin: 30px;
+}
+.f_info li a{
+    line-height: 1.8;
 }
 
-
-.left1-1{
-    margin-bottom: 20px;
+.f_left{
+    display: flex;
+    gap: 40px;
 }
+
 
 .left2 img{
     display: block;
     margin-bottom: 15px;
-}
-
-.f_right{
-    padding: 0 20px;
 }
 
 
@@ -253,7 +256,7 @@ header img{
     display: flex;
     align-items: center;
     gap:100px;
-    margin-bottom: 76px;
+    margin-bottom: 50px;
 }
 
 .right_group h4{
@@ -263,4 +266,5 @@ header img{
 
 .footer_area p{
     color: #33AE23;
+    font-weight: bold;
 }
