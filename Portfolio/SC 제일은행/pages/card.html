@@ -324,6 +324,7 @@
     <footer class="footer">
     </footer>
     
+    <a href="#x" class="gotop"><i class="xi-arrow-up"></i></a>
 
     <script>
         $(function() {
@@ -367,6 +368,21 @@
                 $(".nav_area").removeClass("on");
             });
         });
+
+           // gotop
+           $(window).scroll(function(){
+                var scrollValue = $(document).scrollTop()
+
+                if(scrollValue>300){
+                    $('.gotop').fadeIn()
+                }else{
+                    $('.gotop').fadeOut()
+                }
+             })
+
+            $('.gotop').on('click',function(){
+                $('html,body').animate({scrollTop:0})
+            })
 
             
     </script>

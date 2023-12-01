@@ -176,9 +176,12 @@
         </div>
     </div>
 
+    <a href="#x" class="gotop"><i class="xi-arrow-up"></i></a>
+
+
     <script>
         var nav = $('.nav_titles a')
-        console.log(nav)
+        // console.log(nav)
 
         nav.each(function(i, ele){
             
@@ -190,6 +193,18 @@
                     $(this).removeClass('on')
                 },
             )
+        })
+
+        var navOffsetValue = $('.nav').offset().top 
+        
+        $(window).scroll(function(){
+            var scrollValue = $(document).scrollTop()
+            // console.log(scrollValue)
+            if(scrollValue>navOffsetValue){
+                $('.nav').addClass('fixed')
+            }else{
+                $('.nav').removeClass('fixed')
+            }
         })
 
         

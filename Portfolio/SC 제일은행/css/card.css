@@ -1,6 +1,9 @@
 /* sub_nav */
 .nav_area{
-    position: relative;
+    position: fixed;
+    top: 80px;
+    z-index: 1000;
+    width: 100%;
 }
 
 .nav{
@@ -95,6 +98,7 @@
 /* slider */
 .slider{
     position: relative;
+    margin-top: 130px;
    
 }
 .slides{
