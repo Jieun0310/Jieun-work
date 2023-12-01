@@ -74,8 +74,8 @@
                 <div class="card_detail">
                     <div class="image_area">
                         <img src="../images/red_card/1113127_IBMB_the_Red_enamel.png" alt="">
-                        <a href="">카드디자인보기</a>
-                        <a href="">상품정보보기</a>
+                        <a href="#">카드디자인보기</a>
+                        <a href="#">상품정보보기</a>
                     </div>
 
                     <div class="info">
@@ -196,14 +196,17 @@
         })
 
         var navOffsetValue = $('.nav').offset().top 
+        console.log(navOffsetValue);
         
         $(window).scroll(function(){
             var scrollValue = $(document).scrollTop()
             // console.log(scrollValue)
             if(scrollValue>navOffsetValue){
-                $('.nav').addClass('fixed')
+                $('.nav').addClass('active')
+                $('.nav_titles h4').addClass('active')
             }else{
-                $('.nav').removeClass('fixed')
+                $('.nav').removeClass('active')
+                $('.nav_titles h4').removeClass('active')
             }
         })
 
