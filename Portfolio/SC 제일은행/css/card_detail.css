@@ -1,3 +1,6 @@
+header{
+    background-color: #F6F6F6;
+}
 
 .header_card{
     display: flex;
@@ -8,6 +11,10 @@
 
 header img{
     display: inline-block;
+}
+
+section{
+    background-color: #F6F6F6;
 }
 
 .left{
@@ -43,7 +50,12 @@ header img{
 
 .nav_titles{
     display: flex;
-    
+    margin-left: 30px;
+}
+
+.nav_titles a.on{
+    background-color: #33AE23;
+    color: #fff;
 }
 
 .nav_titles h4{
@@ -54,11 +66,13 @@ header img{
 
 .date{
     margin: 15px 0;
-    display: block;
+    display: flex;
+    justify-content: end;
     font-size: 12px;
     font-weight: bold;
     color: #818181;
-    margin-left: 85%;   
+    padding-right: 30px;
+    
 }
 
 .selector{
@@ -66,6 +80,17 @@ header img{
     display: flex;
     align-items: center;
     margin: 0 auto;
+    color: #223354;
+}
+
+.selector a.on{
+    background-color: #fff;
+    color: #000;
+}
+
+.selector a:hover{
+    background-color: #fff;
+    color: #223354;
 }
 
 .selector a{
@@ -80,14 +105,15 @@ header img{
     line-height: 47px;
     background-color: #223354;
     width: 940px;
-    margin: 30px 0;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.4);
+    margin: 30px auto;
 }
 
 .title h3{
     font-size: 16px;
     color: white;
     padding-left: 20px;
-    font-weight: normal;
+    font-size: 18px;
 }
 
 .card_detail{
@@ -98,6 +124,7 @@ header img{
     padding: 20px 40px;
     display: flex;
     justify-content: space-between;
+    margin: 30px auto;
 }
 
 .image_area{
@@ -183,7 +210,7 @@ header img{
     height: 470px;
     background-color: #fff;
     border: 1px solid #ddd;
-    margin:30px 0 ;
+    margin: 30px auto;
     box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
 }
 
@@ -194,6 +221,10 @@ header img{
     line-height: 1.6;
     font-size: 12px;
     border-bottom: 1px solid #b9b9b9;
+}
+
+.caution_text p:nth-child(-n+5){
+    font-weight: bold;
 }
 
 .caution_text p:last-child{
@@ -223,19 +254,26 @@ header img{
     font-size: 14px;
 }
 
+.footer_area a:hover{
+    text-decoration: underline;
+}
+
 .line{
     width: 940px;
     height: 35px;
     background: linear-gradient(to bottom, #ffffff 20%, #f3f3f3 50% );
     border-top: 1px solid #DEDEDE;
     border-bottom: 1px solid #DEDEDE;
+    margin: 30px auto;
 }
 
 .f_info{
     display: flex;
-    gap: 120px;
-    margin: 30px;
+    align-items: center;
+    margin-left: 50px;
+    gap: 100px;
 }
+
 .f_info li a{
     line-height: 1.8;
 }

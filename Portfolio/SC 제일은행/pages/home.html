@@ -80,64 +80,78 @@
 
             <ul class="event_list">
                 <li>
-                    <img src="../images/banner1.jpg" alt="banner1 img">
+                    <div class="photo">
+                        <img src="../images/banner1.jpg" alt="banner1 img">
+                    </div>
                     <div class="event_text">
                         <p>SC제일은행 X 현대카드 특별 이벤트</p>
                         <span>2023.11.01 ~ 2023.11.30</span>
                     </div>
                 </li>
                 <li>
-                    <img src="../images/banner2.png" alt="banner2 img">
+                    <div class="photo">
+                        <img src="../images/banner2.png" alt="banner1 img">
+                    </div>
                     <div class="event_text">
                         <p>이노베이션 수상기념 / 수수료 면제 이벤트</p>
                         <span>2023.01.01 ~ 2023.12.31</span>
                     </div>
                 </li>
                 <li>
-                    <img src="../images/banner3.jpg" alt="banner3 img">
+                    <div class="photo">
+                        <img src="../images/banner3.jpg" alt="banner1 img">
+                    </div>
                     <div class="event_text">
                         <p>2023 PB마케팅프로그램</p>
                         <span>2023.02.22 ~ 2023.12.29</span>
                     </div>
                 </li>
                 <li>
-                    <img src="../images/banner4.gif" alt="banner4 img">
+                    <div class="photo">
+                        <img src="../images/banner4.gif" alt="banner1 img">
+                    </div>
                     <div class="event_text">
                         <p>금융결제원 CMS 신규 계약 이벤트</p>
                         <span>2023.01.02 ~ 2023.12.31</span>
-                    </div>
-                    
+                    </div>                    
                 </li>
 
                 <li>
-                    <img src="../images/banner1.jpg" alt="banner1 img">
+                    <div class="photo">
+                        <img src="../images/banner1.jpg" alt="banner1 img">
+                    </div>
                     <div class="event_text">
                         <p>SC제일은행 X 현대카드 특별 이벤트</p>
                         <span>2023.11.01 ~ 2023.11.30</span>
                     </div>
                 </li>
                 <li>
-                    <img src="../images/banner2.png" alt="banner2 img">
+                    <div class="photo">
+                        <img src="../images/banner2.png" alt="banner1 img">
+                    </div>
                     <div class="event_text">
                         <p>이노베이션 수상기념 / 수수료 면제 이벤트</p>
                         <span>2023.01.01 ~ 2023.12.31</span>
                     </div>
                 </li>
                 <li>
-                    <img src="../images/banner3.jpg" alt="banner3 img">
+                    <div class="photo">
+                        <img src="../images/banner3.jpg" alt="banner1 img">
+                    </div>
                     <div class="event_text">
                         <p>2023 PB마케팅프로그램</p>
                         <span>2023.02.22 ~ 2023.12.29</span>
                     </div>
                 </li>
                 <li>
-                    <img src="../images/banner4.gif" alt="banner4 img">
+                    <div class="photo">
+                        <img src="../images/banner4.gif" alt="banner1 img">
+                    </div>
                     <div class="event_text">
                         <p>금융결제원 CMS 신규 계약 이벤트</p>
                         <span>2023.01.02 ~ 2023.12.31</span>
-                    </div>
-                    
-                </li>
+                    </div>                    
+                </li>          
             </ul>
 
             <div class="arrow event">
@@ -182,25 +196,25 @@
                     <img src="../images/card1.png" alt="card1 img">
                     <h4>SC제일은행-the Red Stripe</h4>
                     <span>My Hot Luxury</span>
-                    <a href="card.html">상세보기<i class="xi-angle-right-thin"></i></a>
+                    <a href="card_detail.html">상세보기<i class="xi-angle-right-thin"></i></a>
                 </li>
                 <li class="card2">
                     <img src="../images/card2.png" alt="card2 img">
                     <h4>SC제일은행-대한항공카드 030</h4>
                     <span> 연회비 부담은 줄이고 오직 마일리지에 집중한 카드</span>
-                    <a href="card.html">상세보기<i class="xi-angle-right-thin"></i></a>
+                    <a href="#">상세보기<i class="xi-angle-right-thin"></i></a>
                 </li>
                 <li class="card3">
                     <img src="../images/card3.png" alt="card3 img">
                     <h4>SC제일은행-현대카드 M BOOST</h4>
                     <span>쓰면 쓸수록 강력한 포인트카드</span>
-                    <a href="card.html">상세보기<i class="xi-angle-right-thin"></i></a>
+                    <a href="#">상세보기<i class="xi-angle-right-thin"></i></a>
                 </li>
                 <li class="card4">
                     <img src="../images/card4.png" alt="card4 img">
                     <h4>SC제일은행-현대카드ZERO Edition2(포인트형)</h4>
                     <span>실적조건, 적립한도 없는 포인트카드</span>
-                    <a href="card.html">상세보기<i class="xi-angle-right-thin"></i></a>
+                    <a href="#">상세보기<i class="xi-angle-right-thin"></i></a>
                 </li>
             </ul>
         </section>
@@ -265,11 +279,11 @@
     <footer class="footer">
     </footer>
 
-   
+    <a href="#x" class="gotop"><i class="xi-arrow-up"></i></a>
    
 
     <script>
-
+       
         $(function() {
             // 헤더 include
             $('.header_area').load('../inc/header.html')
@@ -318,7 +332,22 @@
                 dots:true,
                 autoplay: true,
                 autoplaySpeed: 800
-            });    
+            });  
+            
+            // gotop
+            $(window).scroll(function(){
+                var scrollValue = $(document).scrollTop()
+
+                if(scrollValue>300){
+                    $('.gotop').fadeIn()
+                }else{
+                    $('.gotop').fadeOut()
+                }
+             })
+
+            $('.gotop').on('click',function(){
+                $('html,body').animate({scrollTop:0})
+            })
     </script>
 
 
