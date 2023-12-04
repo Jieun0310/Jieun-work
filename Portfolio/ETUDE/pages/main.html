@@ -97,9 +97,10 @@
 
 
     
-    slider
+    // slider
     var slide = $('.slide')
     console.log(slide)
+    
 
     $('.slider').slick({
         dots:true,
@@ -109,12 +110,13 @@
     }).on('beforeChange', function(event, slick, currentSlide,nextSlide){
         console.log(currentSlide, nextSlide)        
         
-        ScrollReveal().reveal(`.t${nextSlide + 1}` ,{
+        ScrollReveal().reveal(`.t${currentSlide + 1}` ,{
             distance:'50px',
             origin:'bottom',
             easing: 'ease-in-out',
         })  
     })
-    </script>
 
+    </script>
+    
 </html>
