@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <!-- slick -->
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!--scrollreveal  -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+</head>
+<body>
+    <header></header>
+
+    <div class="slider">
+        <div class="slide">
+            <img src="../images/main slider/silde_01.jpg" alt="silde_01">
+            <div class="text t1">
+                <h3>롯데온 선/런/칭</h3>
+                <p>속눈썹 뿌리부터 한올 한올 결살리는 역대급 마스카라♥</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="../images/main slider/silde_02.jpg" alt="silde_02">
+            <div class="text t2">
+                <h3>핑덕 러버스! 핑카이브 컬렉션</h3>
+                <p>포근하고 따뜻한 웜 핑크 베리에이션 팔레트</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="../images/main slider/silde_03.jpg" alt="silde_03">
+            <div class="text t3">
+                <h3>핑덕 러버스! 핑카이브 컬렉션</h3>
+                <p>두근거리는 설레임을 담은 볼빨간 딸기 치크</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="../images/main slider/silde_04.jpg" alt="silde_04">
+            <div class="text t4">
+                <h3>조효진 개발 쉐딩 스틱</h3>
+                <p>한-끗 차이로 달라지는 부위별 음영 재창조 메이커</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="../images/main slider/silde_05.jpg" alt="silde_05">
+            <div class="text t5">
+                <h3>ETUDE x BEARKKU</h3>
+                <p>베어꾸는 하루종일 귀엽다구~♡</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="../images/main slider/silde_06.jpg" alt="silde_06">
+            <div class="text t6">
+                <h3>ETUDE x BEARKKU</h3>
+                <p>베어꾸는 하루종일 귀엽다구~♡</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="../images/main slider/silde_07.jpg" alt="silde_07">
+            <div class="text t7">
+                <h3>CIRY EDITION</h3>
+                <p>매력적인 도시의 느낌을 담아낸 컬렉션</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="../images/main slider/silde_08.jpg" alt="silde_09">
+            <div class="text t8">
+                <h3>고수분 물빛 스밈 틴트</h3>
+                <p>맑은 물빛이 촉촉하게 스며드는 프루티 듀이 틴트</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    // header
+    $('header').load('../inc/header.html')
+
+    $(window).scroll(function(){
+            var scrollValue = $(window).scrollTop()
+            // console.log(scrollValue)
+
+            if(scrollValue > 500){
+                $('.gnb').addClass('.active')
+            }else{
+                $('.gnb').removeClass('.active')
+            }
+        })
+
+
+    
+    slider
+    var slide = $('.slide')
+    console.log(slide)
+
+    $('.slider').slick({
+        dots:true,
+        fade: true,
+        cssEase: 'linear'
+
+    }).on('beforeChange', function(event, slick, currentSlide,nextSlide){
+        console.log(currentSlide, nextSlide)        
+        
+        ScrollReveal().reveal(`.t${nextSlide + 1}` ,{
+            distance:'50px',
+            origin:'bottom',
+            easing: 'ease-in-out',
+        })  
+    })
+    </script>
+
+</html>

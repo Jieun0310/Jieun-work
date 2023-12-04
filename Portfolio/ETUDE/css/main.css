@@ -1,0 +1,60 @@
+/* slider */
+
+.slide{
+    position: relative;
+}
+
+.slide img{
+
+    display: block;
+    width: 100%;
+}
+
+.slide .text {
+    position: absolute;
+    bottom: 180px;
+    left: 160px;
+    line-height: 1.5;
+    /* opacity: 0;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+    animation: ani_top_bottom 0.5s 0.5s infinite alternate; */
+}
+
+/* @keyframes ani_top_bottom {
+    0% {
+       bottom: 50px ;
+        opacity: 0;
+    }
+    100% {
+        bottom: 180px ;
+        opacity: 1;
+    }
+} */
+
+.slide .text h3{
+    font-size: 32px;
+}
+
+/* slick-dots */
+.slick-dots{
+    bottom: 100px;
+}
+
+.slick-dots li{
+    width: 160px;
+    margin: 0;
+}
+
+.slick-dots li button:before{
+    content: '';
+    background-color: #fff;
+    height: 1px;
+    width: 160px;
+}
+
+li.slick-active{
+    height: 3px;
+    background-color: #fff;
+}
