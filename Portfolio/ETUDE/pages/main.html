@@ -17,6 +17,7 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
 </head>
+
 <body>
     <header></header>
 
@@ -78,6 +79,86 @@
             </div>
         </div>
     </div>
+
+    <section class="products">
+        <div class="product">
+            <a href="#">
+                <img src="../images/fixingtint.png" alt="fixingtint">
+                <div class="text">
+                    <span>픽싱틴트</span>
+                    <span>12,000원</span>
+                </div>
+            </a>
+        </div>
+        <div class="product">
+            <a href="#">
+                <img src="../images/playcoloreyes2023_all.png" alt="playcoloreyes2023_all">
+                <div class="text">
+                    <span>플레이 컬러 아이즈</span>
+                    <span>30,000원</span>
+                </div>
+            </a>
+        </div>
+        <div class="product">
+            <a href="#">
+                <img src="../images/curlfix2023_black.png" alt="curlfix2023_black">
+                <div class="text">
+                    <span>컬 픽스 마스카라</span>
+                    <span>15,000원</span>
+                </div>
+            </a>
+        </div>
+        <div class="product">
+            <a href="#">
+                <img src="../images/0137-Contour_Powder-9.png" alt="Contour_Powder">
+                <div class="text">
+                    <span>그림자 쉐딩</span>
+                    <span>20,000원</span>
+                </div>
+            </a>
+        </div>
+        <div class="product">
+            <a href="#">
+                <img src="../images/시카앰플에센스-1.png" alt="시카앰플에센스">
+                <div class="text">
+                    <span>순정 시카 카밍 앰플 에센스</span>
+                    <span>29,000원</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="makeup_look">
+        <div class="bgc_img"></div>
+        <div class="titles">
+            <img src="../images/makeuplook-icon.png" alt="makeuplook-icon">
+            <h2>Makeup Look</h2>
+            <p>지금 나에게 어울리는 메이크업룩은?</p>
+            <a href="#">View More</a>
+        </div>
+        <div class="makeup_look_girl"></div>
+        <div class="gangnam"></div>
+        <div class="makeup_products">
+            <div class="makeup eye">
+                <a href="">
+                <img src="../images/makeup_look_main_prd_-400x247.jpg" alt="makeup_look_main_prd_">
+                <span>EYE</span>
+                <i class="xi-arrow-right"></i>
+            </div>
+            <div class="makeup lip">
+                <a href="">
+                <img src="../images/makeup_look_main_prd2_2309.jpg" alt="makeup_look_main_prd2_2309">
+                <span>LIP</span>
+                <i class="xi-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        
+    </section>
+
+
+
 </body>
 
 <script>
@@ -85,22 +166,22 @@
     $('header').load('../inc/header.html')
 
     $(window).scroll(function(){
-            var scrollValue = $(window).scrollTop()
-            // console.log(scrollValue)
+    var scrollValue = $(window).scrollTop()
+    // console.log(scrollValue)
 
-            if(scrollValue > 500){
-                $('.gnb').addClass('.active')
-            }else{
-                $('.gnb').removeClass('.active')
-            }
-        })
-
+    if(scrollValue > 300){
+    $('header').addClass('active')
+    
+    }else{
+        $('header').removeClass('active')   
+    }
+})
+   
 
     
     // slider
     var slide = $('.slide')
-    console.log(slide)
-    
+    // console.log(slide)
 
     $('.slider').slick({
         dots:true,
@@ -108,15 +189,23 @@
         cssEase: 'linear'
 
     }).on('beforeChange', function(event, slick, currentSlide,nextSlide){
-        console.log(currentSlide, nextSlide)        
+        console.log(currentSlide, nextSlide)  
+        var num = nextSlide + 1      
         
-        ScrollReveal().reveal(`.t${currentSlide + 1}` ,{
+        ScrollReveal().reveal(`.t${num}` ,{
             distance:'50px',
             origin:'bottom',
             easing: 'ease-in-out',
         })  
+        // ScrollReveal().reveal('.slick-active .text' ,{
+        //     distance:'50px',
+        //     origin:'bottom',
+        //     easing: 'ease-in-out',
+        // })  
+        
     })
 
+   
     </script>
     
 </html>

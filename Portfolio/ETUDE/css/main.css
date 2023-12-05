@@ -5,33 +5,37 @@
 }
 
 .slide img{
-
     display: block;
+    height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 
 .slide .text {
     position: absolute;
-    bottom: 180px;
+    bottom: 0px;
     left: 160px;
     line-height: 1.5;
-    /* opacity: 0;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
-    animation-play-state: running;
-    animation: ani_top_bottom 0.5s 0.5s infinite alternate; */
+    opacity: 0;
 }
 
-/* @keyframes ani_top_bottom {
+.slider .slick-active .text{
+    animation-name: slick_ani;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slick_ani{
     0% {
-       bottom: 50px ;
+        bottom: 0px ;
         opacity: 0;
     }
     100% {
         bottom: 180px ;
         opacity: 1;
     }
-} */
+}
 
 .slide .text h3{
     font-size: 32px;
@@ -39,7 +43,9 @@
 
 /* slick-dots */
 .slick-dots{
-    bottom: 100px;
+    left: 120px;
+    bottom: 90px;
+    width: 1350px;
 }
 
 .slick-dots li{
@@ -57,4 +63,143 @@
 li.slick-active{
     height: 3px;
     background-color: #fff;
+}
+
+.slick-dotted.slick-slider{
+    margin: 0;
+}
+
+/* products */
+.products{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 160px 20px;
+    background-color: rgb(255, 246, 235);
+}
+
+.product img{
+    display: block;
+    width: 266px;
+    height: 266px;
+    object-fit:cover;
+}
+
+.product .text span{
+    display: block;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.product .text span:last-child{
+    font-weight: bold;
+}
+
+/* makeup_look */
+.makeup_look{
+    position: relative;
+}
+.bgc_img{
+    background-image: url(../images/makeup_look_main_bg_2208.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    width: 100%;
+    height: 1700px;
+}
+
+.makeup_look .titles{
+    position: absolute;
+    top: 3%;
+    left:50%;
+    transform: translateX(-50%);
+    text-align: center;
+
+}
+
+.makeup_look .titles img{
+    display: block;
+    margin: 0 auto;
+}
+
+.makeup_look .titles h2{
+    display: block;
+    font-size: 34px;
+}
+
+.makeup_look .titles p{
+    margin: 25px 0;
+}
+
+.makeup_look .titles a{
+    display: inline-block;
+    padding: 14px 26px;
+    background-color: rgba(0,0,0,0.8);
+    color: #fff;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.makeup_look_girl{
+    background-image: url(../images/PCE_makeup_main.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 475px;
+    height: 602px;
+    position: absolute;
+    top: 25%;
+    left: 42%;
+    transform: translate(-25%,-42%);
+}
+
+.gangnam{
+    background-image: url(../images/makeup_look_main_title_2209.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 149px;
+    position: absolute;
+    top: 45%;
+    left: 55%;
+    transform: translate(-45%,-55%)
+}
+
+.makeup_products{
+    display: flex;
+    gap: 10px;
+}
+
+.makeup{
+    position: relative;
+}
+
+.makeup_products img{
+    display: block;
+    height: 410px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.makeup_products span{
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgba(0,0,0,0.6);
+    padding: 5px 10px;
+    border-radius: 2px;
+}
+
+.makeup_products i{
+   font-size: 32px;
+   background-color: blue;
+   color:#fff;
+   position: absolute;
+   bottom: 20px;
+   right: 20px;
+   padding: 5px;
+   border-radius: 100%;
+
 }
