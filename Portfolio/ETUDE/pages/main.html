@@ -160,46 +160,53 @@
     </div>
 
     <section class="makeup_look">
-        <div class="bgc_img"></div>
         <div class="titles">
-            <img src="../images/makeuplook-icon.png" alt="makeuplook-icon">
-            <h2>Makeup Look</h2>
+            <div class="title_01">
+                <img src="../images/makeuplook-icon.png" alt="makeuplook-icon">
+                <h2>Makeup Look</h2>
+            </div>
             <p>지금 나에게 어울리는 메이크업룩은?</p>
             <a href="#" class="btn">View More</a>
+            <a href="#" class="m_btn">메이크업룩 전체보기 <span>></span> </a>
         </div>
-        <div class="makeup_look_girl"></div>
-        <div class="gangnam"></div>
+        <div class="makeup_look_girl">
+            <a href="#"><img src="../images/PCE_makeup_main.jpg" alt="PCE_makeup_main"></a>
+        </div>
+        <div class="gangnam">
+            <img src="../images/makeup_look_main_title_2209.png" alt="">
+        </div>
+    </section>
 
-        <div class="makeup_products">
-            <div class="makeup">
-                <a href="">
-                    <div class="eye">
-                        <div class="photo">
-                        <img src="../images/makeup_look_main_prd_-400x247.jpg" alt="makeup_look_main_prd_">
-                        </div>
+    <section class="makeup_products" >
+        <div class="swiper makeup_product">
+            <div class="swiper-wrapper items">
+                <div class="swiper-slide">
+                    <a href="#" class="item">
+                        <div class="photo"><img src="../images/makeup_look_main_prd_-400x247.jpg" alt="makeup_look_main_prd_"></div>
                         <div class="makeup_title">
-                            <span>EYE</span>
+                            <p>EYE</p>
                             <i class="xi-arrow-right"></i>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a href="#" class="item">
+                        <div class="item lip">
+                            <div class="photo"><img src="../images/makeup_look_main_prd2_2309.jpg" alt="makeup_look_main_prd2_2309"></div>
+                            <div class="makeup_title">
+                                <p>LIP</p>
+                                <i class="xi-arrow-right"></i>
+                            </div>
+                        </div>
+                     </a>
+                </div>
             </div>
-            <div class="makeup">
-                <a href="">
-                    <div class="photo">
-                    <img src="../images/makeup_look_main_prd2_2309.jpg" alt="makeup_look_main_prd2_2309">
-                    </div>
-                    <div class="makeup_title">
-                        <span>LIP</span>
-                        <i class="xi-arrow-right"></i>
-                    
-                    </div>
-                </a>
-            </div>
-        </div>
+        </div> 
+    </section>   
 
         
-    </section>
+   
 
 
 
@@ -297,6 +304,12 @@
     });
 </script>
 
-
+<script>
+ var swiper2 = new Swiper(".makeup_product", {
+      slidesPerView: 2,
+      spaceBetween: 0,  
+    });
+  </script>
+</script>
     
 </html>

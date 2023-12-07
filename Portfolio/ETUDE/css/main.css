@@ -1,7 +1,4 @@
 /* slider */
-.slider{
-}
-
 .slide{
     position: relative;
 }
@@ -53,7 +50,7 @@
 .slick-dots li {
     position: relative;
     display: inline-block;
-    width: 200px;
+    width: 160px;
     margin: 0px;
     cursor: pointer;
 }
@@ -65,14 +62,14 @@
 .slick-dots li button:before{
     content: '';
     background-color: #fff;
-    width: 200px;
+    width: 160px;
     height: 1px;
 }
 
 .slick-dots li.slick-active button:before{
     content: '';
     background-color: #fff;
-    width: 200px;
+    width: 160px;
     height: 2px;
 }
 
@@ -81,11 +78,11 @@
 }
 
 /* products*/
-.swiper_01{
+.swiper_01.products{
     background-color: rgb(255, 244, 228);
     padding: 166px 0;
 } 
-.swiper-slide {
+.products .swiper-slide {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -93,7 +90,7 @@
 }
 
 
-.swiper-slide .photo img{
+.products .swiper-slide .photo img{
     width: 300px;
     height: 300px;
     display: block;
@@ -101,16 +98,16 @@
     margin: 0 auto;
 }
 
-.swiper-slide .text{
+.products .swiper-slide .text{
     margin: 30px 0;
     font-size: 22px;
 }
-.swiper-slide .text h5{
+.products  .swiper-slide .text h5{
     display: block;
     margin-bottom: 40px;
     font-weight: 400;
 }
-.swiper-slide .text span{
+.products  .swiper-slide .text span{
     display: block;
     font-weight: bold;
 }
@@ -118,131 +115,109 @@
 /* makeup_look */
 .makeup_look{
     position: relative;
-}
-.bgc_img{
     background-image: url(../images/makeup_look_main_bg_2208.jpg);
     background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover;
+    background-position: top left 35%;
     width: 100%;
-    height: 1850px;
+    height: 1300px;
 }
 
 .makeup_look .titles{
-    position: absolute;
-    top: 60px;
-    left: 50%;
-    transform: translateX(-50%);
     text-align: center;
-}
-
-.makeup_look .titles img{
-    display: block;
-    margin: 0 auto;
+    padding-top: 100px;
 }
 .makeup_look .titles h2{
-    display: block;
-    font-size: 36px;
+    font-size: 32px;
 }
-
 .makeup_look .titles p{
-    display: block;
+    font-size: 16px;
     margin: 30px 0;
 }
-
-.makeup_look .titles a.btn{
-    display: inline-block;
-    padding: 12px 24px;
-    font-size: 18px;
-    font-weight: bold;
+.makeup_look .titles .btn{
+    display: block;
+    text-align: center;
+    width: 160px;
+    height: 55px;
+    line-height: 55px;
     background-color: rgba(0,0,0,0.75);
     color: #fff;
     border-radius: 4px;
+    margin: 0 auto;
 }
 
-.makeup_look_girl{
-    background-image: url(../images/PCE_makeup_main.jpg);
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover;
-    width: 475px;
-    height: 602px;
-    position: absolute;
-    top: 380px;
-    left: 50%;
-    transform: translateX(-50%);
+.makeup_look_girl a img{
+    display: block;
+    margin: 80px auto 0 auto;
     border-radius: 4px;
 }
 
-.gangnam{
-    background-image: url(../images/makeup_look_main_title_2209.png);
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover;
-    width: 1450px;
-    height: 160px;
-    position: absolute;
-    top: 47%;
-    left: 45%;
-    transform: translateX(-45%);
+.gangnam img{
+    display: block;
+    margin: 60px auto;
 }
 
 .makeup_products{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 20px;
-    margin: 40px auto;
+    margin-bottom: 56px;
 }
 
-.makeup{
-    position: relative;
+.swiper-wrapper .items{
 }
 
-.makeup .eye{
-    display: block;
-    width: 100%;
-    height: 100%;
-    border-radius: 4px;
+.makeup_products .swiper-wrapper .photo{
+    width: 739px;
+    height: 457px;
     overflow: hidden;
-}
-
-
-.makeup a:hover .eye .photo{
-    transform: scale(1.1);
-    width: 100%;
-    height: 100%;
-    transition: all 0.5s;
     border-radius: 4px;
+    transition: all 0.5s;
+    margin: 0 auto;
 }
 
-.makeup_title span{
+.swiper-wrapper .photo:hover img{
+    transform: scale(1.1);
+}
+
+.makeup_products img {
     display: block;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.makeup_title p{
+    position: absolute;
     padding: 5px 15px;
     background-color: rgba(0,0,0,0.75);
     color: #fff;
     border-radius: 2px;
-    font-size: 12px;
-    font-weight: bold;
-    position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 20px;
+    left: 20px;
 }
+
 .makeup_title i{
-    font-size: 32px;
-    color: #fff;
-    padding: 5px;
-    background-color: rgb(8, 8, 173);
-    border-radius: 100%;
     position: absolute;
-    bottom: 30px;
-    right: 30px;
+    font-size: 36px;
+    width: 36px;
+    height: 36px;
+    border-radius: 1005;
+    background-color: blue;
+    color: #fff;
+    bottom: 0;
+    right: 0;
 }
+
+
+
+
 
 .m_slider {
     display: none;
 } 
 
+.m_btn{
+    display: none;
+}
+
+
+/* @media  */
 @media (max-width: 576px){
 
     .slider{
@@ -347,7 +322,7 @@
         background-color: rgb(255, 244, 228);
         padding: 40px 0;
     } 
-    .swiper-slide {
+    .products .swiper-slide {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -355,7 +330,7 @@
     }
     
     
-    .swiper-slide .photo img{
+    .products .swiper-slide .photo img{
         width: 150px;
         height: 150px;
         display: block;
@@ -363,16 +338,16 @@
         margin: 0 auto;
     }
     
-    .swiper-slide .text{
+    .products .swiper-slide .text{
         font-size: 16px;
     }
 
-    .swiper-pagination-progressbar {
+    .products .swiper-pagination-progressbar {
         background: rgba(232, 232, 232, 0.8) !important;
         position: absolute;
     }
 
-    .swiper-horizontal>.swiper-pagination-progressbar, .swiper-pagination-progressbar.swiper-pagination-horizontal, .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite, .swiper-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+    .products .swiper-horizontal>.swiper-pagination-progressbar, .swiper-pagination-progressbar.swiper-pagination-horizontal, .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite, .swiper-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
         width: 90% !important;
         height: 3px !important;
         left: 20px !important;
@@ -383,6 +358,27 @@
         --swiper-theme-color: #9a9a9a !important;
     }
     
+    /* makeup_look */
+    .makeup_look{
+        position: relative;
+        margin-bottom: 60px;
+    }
+    .bgc_img{
+        background-image: url(../images/makeup_look_main_bg_2208.jpg);
+        background-repeat: no-repeat;
+        background-position: top;
+        width: 150%;
+        height: 800px;
+    }
+
+    .makeup_look .titles{
+        
+    }
+
+
+    
+    
+
 
     
  
