@@ -1,4 +1,6 @@
 /* slider */
+.slider{
+}
 
 .slide{
     position: relative;
@@ -6,7 +8,6 @@
 
 .slide img{
     display: block;
-    height: 100%;
     width: 100%;
     object-fit: cover;
 }
@@ -42,55 +43,75 @@
 }
 
 /* slick-dots */
+
 .slick-dots{
-    left: 120px;
-    bottom: 90px;
-    width: 1350px;
+    position: absolute;
+    bottom: 100px;
+    left: -25px;
 }
 
-.slick-dots li{
-    width: 160px;
-    margin: 0;
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.slick-dots li button{
+    padding: 0;
 }
 
 .slick-dots li button:before{
     content: '';
     background-color: #fff;
+    width: 200px;
     height: 1px;
-    width: 160px;
 }
 
-li.slick-active{
-    height: 3px;
+.slick-dots li.slick-active button:before{
+    content: '';
     background-color: #fff;
+    width: 200px;
+    height: 2px;
 }
 
 .slick-dotted.slick-slider{
     margin: 0;
 }
 
-/* products */
-.products{
+/* products*/
+.swiper_01{
+    background-color: rgb(255, 244, 228);
+    padding: 166px 0;
+} 
+.swiper-slide {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 160px 20px;
-    background-color: rgb(255, 246, 235);
-}
-
-.product img{
-    display: block;
-    width: 266px;
-    height: 266px;
-    object-fit:cover;
-}
-
-.product .text span{
-    display: block;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
-    margin-bottom: 40px;
 }
-.product .text span:last-child{
+
+
+.swiper-slide .photo img{
+    width: 300px;
+    height: 300px;
+    display: block;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.swiper-slide .text{
+    margin: 30px 0;
+    font-size: 22px;
+}
+.swiper-slide .text h5{
+    display: block;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+.swiper-slide .text span{
+    display: block;
     font-weight: bold;
 }
 
@@ -101,105 +122,269 @@ li.slick-active{
 .bgc_img{
     background-image: url(../images/makeup_look_main_bg_2208.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: top center;
+    background-size: cover;
     width: 100%;
-    height: 1700px;
+    height: 1850px;
 }
 
 .makeup_look .titles{
     position: absolute;
-    top: 3%;
-    left:50%;
+    top: 60px;
+    left: 50%;
     transform: translateX(-50%);
     text-align: center;
-
 }
 
 .makeup_look .titles img{
     display: block;
     margin: 0 auto;
 }
-
 .makeup_look .titles h2{
     display: block;
-    font-size: 34px;
+    font-size: 36px;
 }
 
 .makeup_look .titles p{
-    margin: 25px 0;
+    display: block;
+    margin: 30px 0;
 }
 
-.makeup_look .titles a{
+.makeup_look .titles a.btn{
     display: inline-block;
-    padding: 14px 26px;
-    background-color: rgba(0,0,0,0.8);
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgba(0,0,0,0.75);
     color: #fff;
     border-radius: 4px;
-    font-weight: bold;
 }
 
 .makeup_look_girl{
     background-image: url(../images/PCE_makeup_main.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-position: top center;
+    background-size: cover;
     width: 475px;
     height: 602px;
     position: absolute;
-    top: 25%;
-    left: 42%;
-    transform: translate(-25%,-42%);
+    top: 380px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 4px;
 }
 
 .gangnam{
     background-image: url(../images/makeup_look_main_title_2209.png);
     background-repeat: no-repeat;
-    background-size: contain;
-    width: 100%;
-    height: 149px;
+    background-position: top center;
+    background-size: cover;
+    width: 1450px;
+    height: 160px;
     position: absolute;
-    top: 45%;
-    left: 55%;
-    transform: translate(-45%,-55%)
+    top: 47%;
+    left: 45%;
+    transform: translateX(-45%);
 }
 
 .makeup_products{
     display: flex;
-    gap: 10px;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    margin: 40px auto;
 }
 
 .makeup{
     position: relative;
 }
 
-.makeup_products img{
+.makeup .eye{
     display: block;
-    height: 410px;
-    object-fit: cover;
-    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    overflow: hidden;
 }
 
-.makeup_products span{
+
+.makeup a:hover .eye .photo{
+    transform: scale(1.1);
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+    border-radius: 4px;
+}
+
+.makeup_title span{
     display: block;
+    padding: 5px 15px;
+    background-color: rgba(0,0,0,0.75);
+    color: #fff;
+    border-radius: 2px;
+    font-size: 12px;
+    font-weight: bold;
     position: absolute;
     top: 10px;
     left: 10px;
-    font-size: 12px;
-    font-weight: bold;
+}
+.makeup_title i{
+    font-size: 32px;
     color: #fff;
-    background-color: rgba(0,0,0,0.6);
-    padding: 5px 10px;
-    border-radius: 2px;
+    padding: 5px;
+    background-color: rgb(8, 8, 173);
+    border-radius: 100%;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
 }
 
-.makeup_products i{
-   font-size: 32px;
-   background-color: blue;
-   color:#fff;
-   position: absolute;
-   bottom: 20px;
-   right: 20px;
-   padding: 5px;
-   border-radius: 100%;
+.m_slider {
+    display: none;
+} 
 
+@media (max-width: 576px){
+
+    .slider{
+        display: none;
+    }
+
+    .m_slider {
+        display: block;
+    } 
+
+    .m_slide{
+        position: relative;
+    }
+    
+    .m_slide img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .m_slide .m_text {
+        position: absolute;
+        bottom: 100px;
+        left: 20px;
+        line-height: 1.5;
+    }
+
+    .m_slide .m_text h3{
+        font-size: 18px;
+    }
+    .m_slide .m_text p{
+        font-size: 12px;
+    }
+    
+    .m_slider .slick-active .m_text{
+        animation-name: slick_ani;
+        animation-duration: 0.3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes slick_ani{
+        0% {
+            bottom: 0px ;
+            opacity: 0;
+        }
+        100% {
+            bottom: 100px ;
+            opacity: 1;
+        }
+    }
+
+    /* slick-dots */
+
+    .slick-dots{
+        display: flex;
+        position: absolute;
+        bottom: 80px;
+        left: 80px;
+      
+    }
+
+    .slick-dots li {
+        position: relative;
+        display: inline-block;
+        width: 45px;
+        margin: 0px;
+        cursor: pointer;
+        
+    }
+
+    .slick-dots li button:before{
+        position: absolute;
+        top: 20px;
+        left: -60px;
+        width: 45px;
+        height: 2px;
+        content: '';
+        background-color: #fff;
+        margin: 0 ;
+    }
+
+    .slick-dots li button{
+        padding: 0;
+    }
+
+    .slick-dots li.slick-active button:before{
+        content: '';
+        background-color: #fff;
+        width: 45px;
+        height: 2px;
+    }
+
+    .slick-dotted.slick-slider{
+        margin: 0;
+    }
+
+    /* swiper_01 */
+    .swiper_01{
+        position: relative;
+        background-color: rgb(255, 244, 228);
+        padding: 40px 0;
+    } 
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    
+    .swiper-slide .photo img{
+        width: 150px;
+        height: 150px;
+        display: block;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+    
+    .swiper-slide .text{
+        font-size: 16px;
+    }
+
+    .swiper-pagination-progressbar {
+        background: rgba(232, 232, 232, 0.8) !important;
+        position: absolute;
+    }
+
+    .swiper-horizontal>.swiper-pagination-progressbar, .swiper-pagination-progressbar.swiper-pagination-horizontal, .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite, .swiper-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+        width: 90% !important;
+        height: 3px !important;
+        left: 20px !important;
+        top: initial !important;
+    }
+
+    :root {
+        --swiper-theme-color: #9a9a9a !important;
+    }
+    
+
+    
+ 
+   
 }
