@@ -4,10 +4,11 @@
 }
 .titles h2{
     font-size: 32px;
+    padding-top: 20px;
 }
 .titles p{
     font-size: 14px;
-    margin: 30px 0;
+    margin: 10PX 0;
 }
 .titles .btn{
     display: block;
@@ -20,6 +21,8 @@
     border-radius: 4px;
     margin: 0 auto;
     font-weight: bold;
+    margin: 10px auto;
+    
 }
 
 /* slider */
@@ -490,7 +493,7 @@
 .ad{
     display: flex;
     justify-content: space-between;
-    padding: 120px 240px ;
+    padding: 160px 240px ;
     border-bottom: 1px solid #a1a1a1;
     position: relative;
 }
@@ -535,7 +538,7 @@
 
 .tiktok_text  span{
     display: block;
-    font-size: 28px;
+    font-size: 32px;
     font-weight: normal;
     text-align: right;
 }
@@ -560,7 +563,7 @@
 
 .sns_slider{
     position: absolute;
-    bottom: -120px;
+    bottom: -100px;
     right: 0;
 }
 
@@ -576,13 +579,13 @@
 
 .sns_slides img{
     display: block;
-    width: 555px;
-    height: 555px;
+    width: 540px;
+    height: 540px;
 }
 
 .sns_slides .slick-list {
-    width: 555px;
-    height: 555px;
+    width: 540px;
+    height: 540px;
   }
 
 
@@ -601,6 +604,38 @@
 .m_title{
     display: none;
 }
+
+/* news_event */
+.news_event{}
+
+.news_slider{
+    position: relative;
+    padding: 60px;
+}
+
+.news_slide{
+    position: relative;
+}
+.news_slide h3{
+    position: absolute;
+    bottom: 20px;
+    left: 60px;
+    font-size: 32px;
+    color: #fff;
+    font-weight: normal;
+}
+
+.news_slide img{
+    display: block;
+    width: 656px;
+    height:100% ;
+    border-radius: 4px;
+    margin: 0 auto;
+}
+
+
+
+
 
 
 
