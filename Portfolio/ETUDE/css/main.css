@@ -489,15 +489,10 @@
 /* ad */
 .ad{
     display: flex;
-    gap: 80px;
-    align-items: center;
-    position: relative;
-    padding: 120px 180px;
+    justify-content: space-between;
+    padding: 120px 240px ;
     border-bottom: 1px solid #a1a1a1;
-}
-
-.ad span{
-    font-size: 32px;
+    position: relative;
 }
 
 .ad::before{
@@ -511,18 +506,73 @@
     background-color: #ffdddd;
 }
 
-.sns{
-    display: flex;
+.tiktok, .sosial {
+    position: relative;
+}
+
+.tiktok {
+    padding-left: 50px;
+}
+
+.tiktok p {
+    position: absolute;
+    top: 320px;
+    font-size: 32px;
+    left: 0;
+    transform: rotateZ(-90deg);
+    transform-origin: 0 0;
+    margin: 10px 0;
+}
+.tiktok span {
+    font-weight: bold;
+}
+
+.tiktok_text {
+    position: absolute;
+    bottom: -80px;
+    right: 0;
+}
+
+.tiktok_text  span{
+    display: block;
+    font-size: 28px;
+    font-weight: normal;
     text-align: right;
+}
+
+.tiktok_text  span:last-child{
+    font-weight: bold;
+}
+
+.sns{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
     flex-direction: column;
 }
 .sns img{
     display: block;
+    margin-bottom: 12px;
+    width: 48px;
+    height: 48px;
 }
 
 .sns_slider{
-    padding-left: 120px;
+    position: absolute;
+    bottom: -120px;
+    right: 0;
 }
+
+.sns_slider p{
+    font-size: 28px;
+    padding: 10px 0;
+}
+
+.sns_slider span{
+    font-weight: bold;
+}
+
 
 .sns_slides img{
     display: block;
@@ -534,6 +584,8 @@
     width: 555px;
     height: 555px;
   }
+
+
 
 
 
@@ -862,7 +914,6 @@
         border-radius: 0;
     }
 
-/* ........... */
     .soonjung_items{
         position: absolute;
         bottom: 20px;
@@ -1141,7 +1192,7 @@
 
     .new_products .slick-dots{
         position: absolute;
-        bottom: -20px;
+        bottom: 10px;
         display: flex;
     }
 
@@ -1151,6 +1202,119 @@
         width: 100px;
         height: 2px;
     }
+
+/* ad */
+    .ad{
+        display: flex;
+        justify-content: none;
+        padding: 0px ;
+        border-bottom: none;
+        position: relative;
+    }
+
+    .ad::before{
+        position: absolute;
+        display: block;
+        content: '';
+        width: 100%;
+        top: 0;
+        right: 0;
+        height: 100%;
+        background-color: #ffdddd;
+    }
+
+    .tiktok, .sosial {
+        position: relative;
+    }
+    
+    .tiktok {
+        padding-left: 0px;
+        margin: 60px auto;
+    }
+
+    .tiktok img{
+        display: block;
+        width: 210px;
+        height: 420px;
+    }
+
+    .tiktok p {
+        position: absolute;
+        top: 320px;
+        font-size: 16px;
+        left: -70px;
+        transform: rotateZ(-90deg);
+        transform-origin: 0 0;
+        margin: 10px 0;
+    }
+
+    .tiktok span {
+        font-weight: bold;
+    }
+
+    .tiktok_text {
+        position: absolute;
+        display: flex;
+        gap: 20px;
+        z-index: 1;
+        bottom: -75%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 300px;
+        justify-content: center;
+       
+    }
+    
+    .tiktok_text span {
+       font-size: 16px;
+       text-align: center;
+    }
+    
+
+    .sns{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .sns img{
+        display: block;
+        margin-bottom: 12px;
+        object-fit: cover;
+    }
+
+    .sns_slider{
+        position: absolute;
+        bottom: -540px;
+        right: 0;
+    }
+
+    .sns_slider p{
+        display: none;
+    }
+
+    .sns_slider span{
+        font-weight: bold;
+    }
+
+
+    .sns_slides img{
+        display: block;
+        width: 540px;
+        height: 540px;
+    }
+
+    .sns_slides .slick-list {
+        width: 540px;
+        height: 540px;
+    }
+
+
+
+
 
     
 
