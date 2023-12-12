@@ -1,4 +1,4 @@
-/* @import url("mobile_main.css"); */
+@import "mobile_main.css";
 
 .titles{
     text-align: center;
@@ -25,6 +25,9 @@
     font-weight: bold;
     margin: 10px auto;
     
+}
+.titles .btn:hover{
+    background-color: rgba(0,0,0,1);
 }
 
 /* slider */
@@ -146,7 +149,6 @@
     width: 100%;
     height: 1300px;
 }
-
 
 
 .makeup_look_girl a img{
