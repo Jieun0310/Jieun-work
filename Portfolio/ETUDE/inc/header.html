@@ -1,19 +1,137 @@
-<div class="header_left">
-<div class="logo">
-    <a href="main.html"><img src="../images/logo.svg" alt="logo"></a>
+<div class="header_area">
+  <div class="header_left">
+    <div class="logo">
+      <a href="main.html"><img src="../images/logo.svg" alt="logo" /></a>
+    </div>
+
+    <ul class="gnb_list">
+      <li><a href="#">PRODUCT</a></li>
+      <li><a href="#">BRAND</a></li>
+      <li><a href="#">MAKEUP LOOK</a></li>
+      <li><a href="#">STORE</a></li>
+      <li><a href="#">FOUNDATION FACTORY</a></li>
+    </ul>
+  </div>
+  <div class="header_icons">
+    <a href="#"><img src="../images/ion_search.png" alt="ion_search" /></a>
+    <a href="#" class="menu_bar">
+      <img src="../images/icon_hamburger.png" alt="icon_hamburger" />
+    </a>
+  </div>
 </div>
 
-<ul class="gnb">
-    <li><a href="#">PRODUCT</a></li>
-    <li><a href="#">BRAND</a></li>
-    <li><a href="#">MAKEUP LOOK</a></li>
-    <li><a href="#">STORE</a></li>
-    <li><a href="#">FOUNDATION FACTORY</a></li>
+<ul class="gnb_sub">
+  <li class="gnb_sub_title">
+    <a href="#" class="has_detail">BRAND</a>
+    <ul class="gnb_sub_detail">
+      <li>
+        <a href="#">About ETUDE <span>></span></a>
+      </li>
+      <li>
+        <a href="#">뷰티즌 <span>></span></a>
+      </li>
+      <li>
+        <a href="#">지구를 위한 활동 <span>></span></a>
+      </li>
+    </ul>
+  </li>
+  <li class="gnb_sub_title"><a href="#">PRODUCT</a></li>
+  <li class="gnb_sub_title"><a href="#">MAKEUP LOOK</a></li>
+  <li class="gnb_sub_title"><a href="#">FOUNDATION FACTORY</a></li>
+  <li class="gnb_sub_title">
+    <a href="#" class="has_detail">@etudeofficial</a>
+    <ul class="gnb_sub_detail">
+      <li>
+        <a href="#">Instagram <span>></span></a>
+      </li>
+      <li>
+        <a href="#">Ticktok <span>></span></a>
+      </li>
+    </ul>
+  </li>
+  <li class="gnb_sub_title">
+    <a href="#" class="has_detail">STORE</a>
+    <ul class="gnb_sub_detail">
+      <li>
+        <a href="#">온라인 <span>></span></a>
+      </li>
+      <li>
+        <a href="#">오프라인 <span>></span></a>
+      </li>
+    </ul>
+  </li>
+  <li class="gnb_sub_title">
+    <a href="#" class="has_detail">CONTACT</a>
+    <ul class="gnb_sub_detail">
+      <li>
+        <a href="#">공지사항 <span>></span></a>
+      </li>
+      <li>
+        <a href="#">FAQ <span>></span></a>
+      </li>
+      <li>
+        <a href="#">고객문의 <span>></span></a>
+      </li>
+    </ul>
+  </li>
+  <li class="gnb_sub_title">
+    <a href="#" class="has_detail">MEMBERSHIP</a>
+    <ul class="gnb_sub_detail">
+      <li>
+        <a href="#">핑크멤버십 <span>></span></a>
+      </li>
+      <li>
+        <a href="#">뷰티포인트 <span>></span></a>
+      </li>
+    </ul>
+  </li>
+  <li class="gnb_sub_title">
+    <a href="#" class="has_detail">뽀오얀</a>
+    <ul class="gnb_sub_detail">
+      <li>
+        <a href="#">About 뽀오얀 <span>></span></a>
+      </li>
+      <li>
+        <a href="#">제품보기 <span>></span></a>
+      </li>
+    </ul>
+  </li>
 </ul>
-</div>
 
-<div class="header_icons">
-    <a href="#"><img src="../images/ion_search.png" alt="ion_search"></a>
-    <a href="#"><img src="../images/icon_hamburger.png" alt="icon_hamburger"></a>
-</div>
+<script>
+  $(window).scroll(function () {
+    var scrollValue = $(window).scrollTop();
+    if (scrollValue > 100) {
+      $('header').addClass('active');
+      $('.service_btns').addClass('active');
 
+      if ($('header').hasClass('on')) {
+        $('.service_btns').addClass('on');
+      } else {
+        $('.service_btns').removeClass('on');
+      }
+    } else {
+      $('header').removeClass('active');
+    }
+  });
+
+  $('.menu_bar').click(function () {
+    $('.gnb_sub').toggleClass('active');
+    $('header').toggleClass('on');
+
+    if ($('.gnb_sub').hasClass('active')) {
+      $(this).find('img').attr('src', '../images/icon_Close.png');
+    } else {
+      $(this).find('img').attr('src', '../images/icon_hamburger.png');
+    }
+  });
+
+  $('.gnb_sub_title').hover(
+    function () {
+      $(this).addClass('on').find('ul').stop().show();
+    },
+    function () {
+      $(this).removeClass('on').find('ul').stop().hide();
+    }
+  );
+</script>
